@@ -14,6 +14,4 @@ gems:
   - jekyll-paginate
 
 #Others
-markdown: redcarpet
-redcarpet:
-    extensions: ["tables"]
+markdown: kramdown
