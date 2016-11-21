@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Run Faster</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/cayman.css">
+</head>
+
+  <body>
+    <section class="page-header">
+  <h1 class="project-name">Run Faster</h1>
+  <h2 class="project-tagline">Learn from yesterday, live for today, look to tomorrow.</h2>
+  <a href="http://localhost:4000" class="btn">Home</a>
+  <a href="http://github.com/ripperhe" class="btn">GitHub</a>
+  <a href="https://twitter.com/ripper_he" class="btn">Twitter</a>
+  <a href="http://weibo.com/2244381941/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" class="btn">WeiBo</a>
+  <a href="http://www.jianshu.com/users/b9249fb85d5d/latest_articles" class="btn">JianShu</a>
+</section>
+
+
+    <section class="main-content">
+      
+      <h1>Mac 安装man命令中文文档</h1>
+
+<table><thead>
+<tr>
+<th style="text-align: left">本机环境</th>
+<th style="text-align: left">版本</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">macOS</td>
+<td style="text-align: left">Sierra 10.12</td>
+</tr>
+</tbody></table>
+
+<p>备注：系统版本不同，可能会有一些不同的问题。</p>
+
+<h3>man是什么？</h3>
+
+<p>man，是类unix系统最重要的手册工具，mac预装了man，所以我们可以通过man查询各种命令的使用方法。不过在使用的时候，全都是中文，如果英文不太好，阅读起来就比较困难。</p>
+
+<h3>安装中文文档</h3>
+
+<h4>下载安装包</h4>
+
+<p>利用wget下载安装包</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/manpages-zh/manpages-zh-1.5.1.tar.gz --no-check-certificate
+</code></pre></div>
+<p>没有安装wget的话，可以查看我这篇文章<a href="http://www.jianshu.com/p/f6b290710262">安装wget</a>，也可以直接到 <a href="https://code.google.com/archive/p/manpages-zh/downloads">google code</a> ，选中<strong>manpages-zh-1.5.1.tar.gz</strong>进行下载。</p>
+
+<h4>解压</h4>
+<div class="highlight"><pre><code class="language-" data-lang="">$ tar zxvf manpages-zh-1.5.1.tar.gz
+</code></pre></div>
+<p>直接双击解压也可以</p>
+
+<h4>安装</h4>
+
+<p>先进入解压出来的<strong>manpages-zh-1.5.1</strong>文件夹</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cd manpages-zh-1.5.1
+</code></pre></div>
+<p>然后执行</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ ./configure --prefix=/usr/local/zhman --disable-zhtw
+</code></pre></div>
+<p>其中，<code>--disable-zhtw</code>代表不安装繁体中文，如果要安装繁体中文，还需要配置一些东西</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ make &amp;&amp; make install
+</code></pre></div>
+<h4>配置别名</h4>
+
+<p>现在已经将中文文档安装完成，想调用中文文档的话，我们可以对<code>/etc/man.conf</code>文件进行修改，将其内容中所有<code>/usr/local/share/man</code>全部替换为<code>/usr/local/share/man/zh</code>即可，这样利于man命令的时候，则会显示中文，按<code>q</code>退出。不过这样的方式多少有些问题，利用设置别名的方法可以更好地处理问题。</p>
+
+<p>进入到主用户文件夹</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cd ~
+</code></pre></div>
+<p>显示所有文件</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ ls -a
+</code></pre></div>
+<p>文件列表中有<code>.bashrc</code>文件，最好不要用文本编辑，我个人比较喜欢使用Atmo，如果没有，可以从github上下载（直接在终端打开这个文件进行编辑也可以）。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ open -a atom .bashrc
+</code></pre></div>
+<p>在文件最后添加以下语句，然后保存、退出</p>
+
+<blockquote>
+<p>alias cman=&#39;man -M /usr/local/zhman/share/man/zh_CN&#39;</p>
+</blockquote>
+
+<p>最后重载该文件</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ source .bashrc
+</code></pre></div>
+<p>这样别名配置就生效了，可以通过以下命令查看所有的别名配置</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ alias
+</code></pre></div>
+<p>现在可以调用<code>cman + 命令名</code>查询命令，不过现在可能会出现中文乱码问题</p>
+
+<h4>解决中文乱码</h4>
+
+<p>主要原因是mac的groff版本比较老，可以利用以下命令查看版本</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ groff -v
+</code></pre></div>
+<p>先到网站 <a href="http://git.savannah.gnu.org/cgit/groff.git">groff.git</a> 下载groff新版本，一般1.22版本即可，选中<strong>groff-1.22.tar.gz</strong>进行下载。下载完成之后，解压。然后</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cd groff-1.22
+$ ./configure
+$ sudo make
+$ sudo make install
+</code></pre></div>
+<p>可能会有一些报错，不过不太影响，这个时候进入到<code>/etc/man.conf</code>文件。同样，这里也可以利用Atom打开</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ open -a atom /etc/man.conf
+</code></pre></div>
+<p>在文件末尾加上如下语句，然后保存、退出</p>
+
+<blockquote>
+<p>NROFF preconv -e UTF8 | /usr/local/bin/nroff -Tutf8 -mandoc -c</p>
+</blockquote>
+
+<p>重启终端，再尝试前面定义的<code>cman</code>命令，基本可以正常显示了。在显示上还是有些小问题，不过都还能接受。以下语句即可查询<code>ls</code>命令的用法</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cman ls
+</code></pre></div>
+<p>当然，能看英文文档是最好的，不过在终端看文档，我始终觉得有些不方便，可以利用以下命令让文档输出在preview(预览)中进行查看</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ man -t ls | open -a Preview -f
+</code></pre></div>
+<p>以上命令，将ls换成想要查询的命令即可（<code>cman</code>暂时没找到方法中文输出到Preview，如果找到方法还望大神多多指教）。</p>
+
+<h4>重启终端命令失效的问题</h4>
+
+<p>重启之后<code>.bashrc</code>文件没有自动加载，会导致自定义的命令alias失效，这里就需要加载手动将其加载一下。进入到用户文件夹下，找到<code>.bash_profile</code>文件</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ cd ~ &amp;&amp; ls -a
+</code></pre></div>
+<p>如果没有<code>.bash_profile</code>文件,那需要手动创建一个</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ touch .bash_profile
+</code></pre></div>
+<p>然后利用Atom打开<code>.bash_profile</code>文件</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ open -a atom .bash_profile
+</code></pre></div>
+<p>在文件最后加上以下命令加载<code>.bashrc</code></p>
+
+<blockquote>
+<p>source ~/.bashrc</p>
+</blockquote>
+
+<p>现在再重启终端应该就可以了。如果这样还不行，那应该是装了<code>oh-my-zsh</code>，zsh覆盖了一些系统的shell变量，导致打开终端没有自动调用<code>.bash_profile</code>文件,所以我们再到zsh中调用一下<code>.bash_profile</code>即可。</p>
+<div class="highlight"><pre><code class="language-" data-lang="">$ open -a atom ~/.zshrc
+</code></pre></div>
+<p>在文件末尾加上以下，命令即可</p>
+
+<blockquote>
+<p>source ~/.bash_profile</p>
+</blockquote>
+
+<p>然后，打完收工。</p>
+
+
+      <footer class="site-footer">
+  <span class="site-footer-owner"><a href="http://localhost:4000">Run Faster</a> is maintained by <a href="https://github.com/ripperhe">ripper</a>.</span>
+  <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/pietromenna/jekyll-cayman-theme">Cayman theme</a> by <a href="http://github.com/jasonlong">Jason Long</a>.</span>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>

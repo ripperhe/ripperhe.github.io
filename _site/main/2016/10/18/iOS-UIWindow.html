@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+  <head>
+  <meta charset="UTF-8">
+  <title>Run Faster</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/cayman.css">
+</head>
+
+  <body>
+    <section class="page-header">
+  <h1 class="project-name">Run Faster</h1>
+  <h2 class="project-tagline">Learn from yesterday, live for today, look to tomorrow.</h2>
+  <a href="http://localhost:4000" class="btn">Home</a>
+  <a href="http://github.com/ripperhe" class="btn">GitHub</a>
+  <a href="https://twitter.com/ripper_he" class="btn">Twitter</a>
+  <a href="http://weibo.com/2244381941/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" class="btn">WeiBo</a>
+  <a href="http://www.jianshu.com/users/b9249fb85d5d/latest_articles" class="btn">JianShu</a>
+</section>
+
+
+    <section class="main-content">
+      
+      <h1>iOS UIWindow及悬浮球</h1>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/939125-37108f75b88c3a3a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="UIWindow"></p>
+
+<h4>1.UIWindow简介</h4>
+
+<p>一个<strong>UIWindow</strong>对象为应用程序的用户界面提供了背景以及重要的事件处理行为。
+UIWindow继承自UIView，我们一般不会直接去设置其UI展现，但它对展现程序中的views至关重要。每一个view，想要出现在屏幕上都依赖于window，但是程序中的window之间是相互独立的。应用程序收到事件之后会先转发给适当的window对象，从而又将事件转发给view对象。</p>
+
+<h4>2.程序中有哪些UIWindow</h4>
+
+<p>所有view的展现都依赖于window，创建一个新的iOS工程，将其运行会执行以下事情</p>
+
+<ul>
+<li>Xcode会自动创建一个window，即<code>app delegate</code>中的window属性。</li>
+<li>同时,Xcode会默认创建一个Main.storyboard,其<code>instantiateInitialViewController</code>的显示需要window，依赖的即为前面的window。</li>
+<li>此时，该window的<code>rootViewController</code>即为Main.storyboard的<code>instantiateInitialViewController</code>。</li>
+</ul>
+
+<p>很显然，一个应用程序当中，不是只能有一个window，可以存在多个window。已知的有以下window：</p>
+
+<ul>
+<li>app delegate里的window</li>
+<li>状态栏的window（比较特殊，虽然在程序内部可以调用某些api显示隐藏或改变其UI，但它的window是不被我们的应用程序内部所持有的）</li>
+<li>键盘的window</li>
+</ul>
+
+<h4>3.获取程序中的UIWindow</h4>
+
+<p><code>UIApplication</code>这个类是一个单例类，通过其<strong>sharedApplication</strong>方法进行调用，一个程序可以看做是一个UIApplication对象,可以通过UIApplication对象的以下属性来获取想要的window。</p>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="k">@property</span><span class="p">(</span><span class="n">nullable</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span><span class="n">readonly</span><span class="p">)</span> <span class="n">UIWindow</span> <span class="o">*</span><span class="n">keyWindow</span><span class="p">;</span>
+<span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span><span class="n">readonly</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">__kindof</span> <span class="n">UIWindow</span> <span class="o">*&gt;</span>  <span class="o">*</span><span class="n">windows</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>keyWindow</strong> 应用程序的关键window。用来接收键盘以及非触摸类的消息事件的UIWindow，而且程序中每个时刻只能有一个UIWindow是keyWindow。<br>
+<strong>windows</strong> 应用程序中所有的window对象，包括正在显示的或隐藏的window。</p>
+
+<p>新建一个iOS工程,在没有触发键盘时，在控制台打印<code>winodws</code>如下：</p>
+
+<blockquote>
+<p>(lldb) po [[UIApplication sharedApplication] windows]<br>
+&lt;__NSArrayM 0x61800024d7d0&gt;(<br>
+&lt;<strong>UIWindow</strong>: 0x7fd8e1a06370; frame = (0 0; 414 736); autoresize = W+H; gestureRecognizers = &lt;NSArray: 0x61800024d170&gt;; layer = &lt;UIWindowLayer: 0x61000003e7c0&gt;&gt;<br>
+)</p>
+</blockquote>
+
+<p>该window就是 app delegate 的window，即系统自动生成的那个window。当文本编辑，触发键盘之后，打印<code>windows</code>如下：</p>
+
+<blockquote>
+<p>(lldb) po [[UIApplication sharedApplication] windows]<br>
+&lt;__NSArrayM 0x61000005d1f0&gt;(<br>
+&lt;<strong>UIWindow</strong>: 0x7fd8e1a06370; frame = (0 0; 414 736); autoresize = W+H; gestureRecognizers = &lt;NSArray: 0x61800024d170&gt;; layer = &lt;UIWindowLayer: 0x61000003e7c0&gt;&gt;,<br>
+&lt;<strong>UITextEffectsWindow</strong>: 0x7fd8dfc1cde0; frame = (0 0; 414 736); opaque = NO; autoresize = W+H; layer = &lt;UIWindowLayer: 0x60800022dd60&gt;&gt;,<br>
+&lt;<strong>UIRemoteKeyboardWindow</strong>: 0x7fd8dfc27e40; frame = (0 0; 414 736); opaque = NO; autoresize = W+H; layer = &lt;UIWindowLayer: 0x608000231300&gt;&gt;<br>
+)</p>
+</blockquote>
+
+<p>打印中的<code>UIRemoteKeyboardWindow</code>就是键盘的window，与此同时，还出现了<code>UITextEffectsWindow</code>，这个window我没有找到官方的说明，不过可以推测它也是和文本输入有关系的。</p>
+
+<h4>4.UIWindow的属性与方法</h4>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span><span class="n">strong</span><span class="p">)</span> <span class="n">UIScreen</span> <span class="o">*</span><span class="n">screen</span>
+</code></pre></div>
+<p>该属性默认为<code>[UIScreen mainScreen]</code>，一个<code>UIScreen</code>对象对应一个实际设备的物理屏幕，一般情况下，我们不需要对其进行设置。一个iPhone默认也就一个屏幕，一个屏幕可以存在多个window，那也是为什么我们一个程序里面可以有多个window的原因。</p>
+
+<p>当一个iPhone连接一个外接屏幕的时候，系统会发送通知。然而如果我们什么都不做，外接屏幕会一片漆黑，因为在那个屏幕上不存在任何window对象。如果真的想要在外接的屏幕中显示一些东西的话，那就应该监听系统通知，在接收通知的方法里创建一个新的window，并将其显示，当然，断开连接的时候，应该将window对象置为nil释放。以下为官方示例代码：</p>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">handleScreenConnectNotification</span><span class="p">:(</span><span class="n">NSNotification</span><span class="o">*</span><span class="p">)</span><span class="nv">aNotification</span> <span class="p">{</span>
+    <span class="n">UIScreen</span><span class="o">*</span>    <span class="n">newScreen</span> <span class="o">=</span> <span class="p">[</span><span class="n">aNotification</span> <span class="nf">object</span><span class="p">];</span>
+    <span class="n">CGRect</span>        <span class="n">screenBounds</span> <span class="o">=</span> <span class="n">newScreen</span><span class="p">.</span><span class="n">bounds</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">_secondWindow</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">_secondWindow</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIWindow</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithFrame</span><span class="p">:</span><span class="n">screenBounds</span><span class="p">];</span>
+        <span class="n">_secondWindow</span><span class="p">.</span><span class="n">screen</span> <span class="o">=</span> <span class="n">newScreen</span><span class="p">;</span>
+
+        <span class="c1">// Set the initial UI for the window and show it.
+</span>        <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">viewController</span> <span class="nf">displaySelectionInSecondaryWindow</span><span class="p">:</span><span class="n">_secondWindow</span><span class="p">];</span>
+        <span class="p">[</span><span class="n">_secondWindow</span> <span class="nf">makeKeyAndVisible</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">handleScreenDisconnectNotification</span><span class="p">:(</span><span class="n">NSNotification</span><span class="o">*</span><span class="p">)</span><span class="nv">aNotification</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">_secondWindow</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Hide and then delete the window.
+</span>        <span class="n">_secondWindow</span><span class="p">.</span><span class="n">hidden</span> <span class="o">=</span> <span class="nb">YES</span><span class="p">;</span>
+        <span class="p">[</span><span class="n">_secondWindow</span> <span class="nf">release</span><span class="p">];</span>
+        <span class="n">_secondWindow</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+
+        <span class="c1">// Update the main screen based on what is showing here.
+</span>        <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">viewController</span> <span class="nf">displaySelectionOnMainScreen</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n">UIWindowLevel</span> <span class="n">windowLevel</span><span class="p">;</span>
+</code></pre></div>
+<p>window等级，即window在z轴上的层级关系,默认是0。<code>UIWindowLevel</code>本身是一个<code>CGFloat</code>类型,可以随意设置或进行加减，高等级会显示在低等级上面。系统给出了三种常用等级:</p>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="n">UIKIT_EXTERN</span> <span class="k">const</span> <span class="n">UIWindowLevel</span> <span class="n">UIWindowLevelNormal</span><span class="p">;</span>      <span class="mi">0</span>
+<span class="n">UIKIT_EXTERN</span> <span class="k">const</span> <span class="n">UIWindowLevel</span> <span class="n">UIWindowLevelAlert</span><span class="p">;</span>       <span class="mi">2000</span>
+<span class="n">UIKIT_EXTERN</span> <span class="k">const</span> <span class="n">UIWindowLevel</span> <span class="n">UIWindowLevelStatusBar</span><span class="p">;</span>   <span class="mi">4000</span>
+</code></pre></div>
+<hr>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="k">@property</span><span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span><span class="n">readonly</span><span class="p">,</span><span class="n">getter</span><span class="o">=</span><span class="n">isKeyWindow</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">keyWindow</span><span class="p">;</span>
+</code></pre></div>
+<p>当前window对象是否为程序的keyWindow，系统会自动赋值更新，我们不需要，也不能手动设置。</p>
+
+<hr>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">becomeKeyWindow</span><span class="p">;</span><span class="c1">// override point for subclass. Do not call directly
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">resignKeyWindow</span><span class="p">;</span><span class="c1">// override point for subclass. Do not call directly
+</span></code></pre></div>
+<p>这个是在继承的时候进行重写的，不要手动去调用。在一个window的keyWindow属性改变时会调用，当你写一个子类继承UIWindow,如果需要在window变成keyWindow,或是keyWinow变为NO的时候想做一些事情，就可以重写这两个方法，以下为官方解释。</p>
+
+<blockquote>
+<p>You should rarely need to subclass UIWindow. The kinds of behaviors you might implement in a window can usually be implemented in a higher-level view controller more easily. One of the few times you might want to subclass is to override the becomeKeyWindow or resignKeyWindow methods to implement custom behaviors when a window’s key status changes.</p>
+</blockquote>
+
+<hr>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">makeKeyWindow</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">makeKeyAndVisible</span><span class="p">;</span>
+</code></pre></div>
+<p>一个window的hideen属性默认是YES的，<code>makeKeyWindow</code>是将一个window设置为keyWindow，但是<code>makeKeyAndVisible</code>会将一个window设置为keyWindow并将其显示。如何没有变成keyWindow,则其内部的文本框没法输入文字。</p>
+
+<blockquote>
+<p>UIWindow: 0x12dd3ef20; frame = (0 200; 200 200); hidden = YES; gestureRecognizers = &lt;NSArray: 0x12dd40530&gt;; layer = &lt;UIWindowLayer: 0x12dd3f230&gt;<br>
+UIWindow: 0x12dd3ef20; frame = (0 200; 200 200); gestureRecognizers = &lt;NSArray: 0x12dd40530&gt;; layer = &lt;UIWindowLayer: 0x12dd3f230&gt;</p>
+</blockquote>
+
+<p>以上为将一个window调用<code>makeKeyAndVisible</code>前后对比，可以发现，其hidden从YES变为NO。所以某个window调用<code>makeKeyAndVisible</code>之后，系统对该window至少做了以下事情：</p>
+
+<ul>
+<li>将UIApplication对象的keyWindow设置为当前这个window</li>
+<li>当前window的<code>hidden</code>设置为NO，同时该window的keyWindow属性变为YES</li>
+</ul>
+
+<hr>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="k">@property</span><span class="p">(</span><span class="n">nullable</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span><span class="n">strong</span><span class="p">)</span> <span class="n">UIViewController</span> <span class="o">*</span><span class="n">rootViewController</span><span class="p">;</span>
+</code></pre></div>
+<p>该属性为window的根控制器，现在这个属性是不能为空的，必须进行赋值，否则程序会崩溃。</p>
+
+<hr>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendEvent</span><span class="p">:(</span><span class="n">UIEvent</span> <span class="o">*</span><span class="p">)</span><span class="nv">event</span><span class="p">;</span>
+</code></pre></div>
+<p>有事件需要处理的时候UIApplication会调用该方法派发事件。</p>
+
+<hr>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="k">-</span> <span class="p">(</span><span class="n">CGPoint</span><span class="p">)</span><span class="nf">convertPoint</span><span class="p">:(</span><span class="n">CGPoint</span><span class="p">)</span><span class="nv">point</span> <span class="nf">toWindow</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIWindow</span> <span class="o">*</span><span class="p">)</span><span class="nv">window</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">CGPoint</span><span class="p">)</span><span class="nf">convertPoint</span><span class="p">:(</span><span class="n">CGPoint</span><span class="p">)</span><span class="nv">point</span> <span class="nf">fromWindow</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIWindow</span> <span class="o">*</span><span class="p">)</span><span class="nv">window</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">CGRect</span><span class="p">)</span><span class="nf">convertRect</span><span class="p">:(</span><span class="n">CGRect</span><span class="p">)</span><span class="nv">rect</span> <span class="nf">toWindow</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIWindow</span> <span class="o">*</span><span class="p">)</span><span class="nv">window</span><span class="p">;</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">CGRect</span><span class="p">)</span><span class="nf">convertRect</span><span class="p">:(</span><span class="n">CGRect</span><span class="p">)</span><span class="nv">rect</span> <span class="nf">fromWindow</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">UIWindow</span> <span class="o">*</span><span class="p">)</span><span class="nv">window</span><span class="p">;</span>
+</code></pre></div>
+<p>window之间是相互独立的，如果想要将两个window的坐标相互映射的时候，就需要用到以上几个方法。</p>
+
+<h4>5.如何创建一个UIWindow并显示</h4>
+
+<p>主要有以下几个步骤：</p>
+
+<blockquote>
+<ol>
+<li>创建一个window对象，并用一个对象<strong>强持有</strong>它</li>
+<li>创建一个控制器，赋值为window的根控制器</li>
+<li>显示窗口</li>
+</ol>
+</blockquote>
+
+<p>代码如下：</p>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="c1">//1. 创建一个window对象，并用一个对象强持有它
+</span><span class="n">UIWindow</span> <span class="o">*</span><span class="n">testWindow</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIWindow</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithFrame</span><span class="p">:[</span><span class="n">UIScreen</span> <span class="nf">mainScreen</span><span class="p">].</span><span class="n">bounds</span><span class="p">];</span>
+<span class="n">self</span><span class="p">.</span><span class="n">testWindow</span> <span class="o">=</span> <span class="n">testWindow</span><span class="p">;</span>
+<span class="c1">//2. 创建一个控制器，赋值为window的根控制器
+</span><span class="n">UIViewController</span> <span class="o">*</span><span class="n">controller</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIViewController</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">init</span><span class="p">];</span>
+<span class="n">testWindow</span><span class="p">.</span><span class="n">rootViewController</span> <span class="o">=</span> <span class="n">controller</span><span class="p">;</span>
+<span class="c1">//3. 显示窗口
+</span><span class="p">[</span><span class="n">testWindow</span> <span class="nf">makeKeyAndVisible</span><span class="p">];</span>
+</code></pre></div>
+<p>这里，需要注意一下：</p>
+
+<ul>
+<li>window的frame决定了这个窗口大小，所以需要进行设置</li>
+<li>新的控制器之所以能正常显示，是因为window强持有它，window能正常运行，则是因为我们用了一个暂时不会销毁的对象强持有window（当然，直接用一个静态变量持有也可以，本质上是一样的）。</li>
+<li>如果window看不见，可以试试修改以下其<code>windowLevel</code>属性。高等级的window一定会显示在低等级的window上面，同等级的window,后makeKeyWindow的window就会显示在上面。</li>
+<li>无论是通过代码,storyboard或xib初始化一个控制器来显示，都是以上三步，只是创建控制器的方法有所区别罢了，这里不做讨论了。</li>
+</ul>
+
+<h4>6.如何销毁一个UIWindow</h4>
+
+<p>前面已经说过，对于一个UIWindow对象，之所以显示，是因为有一个对象强持有它，要销毁一个window，只需要将这个强持有去掉即可。但是,这种持有去掉之后，可能window可能不会立即消失，所以，为了确保能够立即将其不展现，最好按以下步骤：</p>
+
+<blockquote>
+<ol>
+<li>将window的hidden属性置为YES</li>
+<li>将持有该window的那个对象对window的持有去掉（有点绕😄）</li>
+</ol>
+</blockquote>
+
+<p>代码如下：</p>
+<div class="highlight"><pre><code class="language-objc" data-lang="objc"><span class="n">self</span><span class="p">.</span><span class="n">testWindow</span><span class="p">.</span><span class="n">hidden</span> <span class="o">=</span> <span class="nb">YES</span><span class="p">;</span>
+<span class="n">self</span><span class="p">.</span><span class="n">testWindow</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+</code></pre></div>
+<p>假如当前这个window是keyWindow，这个window被销毁之后，系统会自动将上一个keyWindow设置为keyWindow，不需要我们去管理。简单说就是假如以 A-&gt;B-&gt;C 这个顺序变为keyWindow之后，C销毁了，B会自动变为keyWindow。需要注意的是，不要去调用<code>resignKeyWindow</code>方法，该方法是用于子类重写的，手动调用之后，结果也是未知的。</p>
+
+<h4>7.我们什么时候需要自己创建一个UIWindow</h4>
+
+<p>苹果官方是这么说的😝</p>
+
+<blockquote>
+<p>Most apps need only one window, which displays the app’s content on the device’s main screen. You can create additional windows and display them on the device’s main screen, but extra windows are more commonly used to display content on an attached external display.</p>
+</blockquote>
+
+<p>新建的UIWindow一般用于外接的屏幕，那在我们手机的主屏幕什么时候会有这种需求呢？我觉得，如果我们需要个一个控件，需要独立于其他的view,并悬浮于应用程序中的时候，也许就需要用到UIWindow了，这里所谓的悬浮，不过就是windowLevel比较高罢了。</p>
+
+<p>公司工程里所集成的测试控件<a href="https://www.bugtags.com/">Bugtags</a>就是利用UIWindow实现的，可以悬浮在任意页面，主要用于测试人员提bug，直接手机上提bug。当然提bug这件事和本文关系不大，在此只是想表明这种情况就可以用UIWindow。</p>
+
+<h4>8.关于悬浮球</h4>
+
+<p>对于这个可拉拽的悬浮球，我也比较好奇，所以自己着手实现了一下，原理也挺简单。</p>
+
+<ul>
+<li>创建一个按钮大小的window并显示</li>
+<li>将其windowLevel设置得较高</li>
+<li>在按钮上添加拖拽手势，随着手势移动，并添加一些边界控制</li>
+</ul>
+
+<p>那就有人问了，这个东西有什么用？</p>
+
+<p>因为公司的工程里确实没有什么需要需要用到这个东西，但是我后来发现这个东西还是有那么一点用😁。不过不是用在正式代码之中，而是开发测试阶段。</p>
+
+<ul>
+<li>做个一键登陆功能（公司的项目开发需要频繁换号，输密码太麻烦）
+
+<ul>
+<li>如果不用换账号，直接写死一个账号，点击悬浮球直接登录</li>
+<li>如果需要频繁换账号的，可以把登录过的账号都记录下来，写到NSUserDefaults等地方，以后每次需要登陆时，点击浮球，出来一个列表，选其中一个登陆</li>
+</ul></li>
+<li>一些调试的时候想要反复执行的某句代码</li>
+</ul>
+
+<hr>
+
+<p>✨具体细节可到GitHub下载demo查看。<a href="https://github.com/ripperhe/ZYSuspensionView">GitHub地址 😁</a><br>
+✨如果有用，还望朋友能给个star，谢谢。</p>
+
+
+      <footer class="site-footer">
+  <span class="site-footer-owner"><a href="http://localhost:4000">Run Faster</a> is maintained by <a href="https://github.com/ripperhe">ripper</a>.</span>
+  <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/pietromenna/jekyll-cayman-theme">Cayman theme</a> by <a href="http://github.com/jasonlong">Jason Long</a>.</span>
+</footer>
+
+
+    </section>
+
+  </body>
+</html>

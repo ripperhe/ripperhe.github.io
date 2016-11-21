@@ -1,0 +1,19 @@
+# Setup
+title:        Run Faster
+tagline:      Learn from yesterday, live for today, look to tomorrow.
+baseurl:      ""
+paginate:     1
+
+# About/contact
+author:
+  name:       ripper
+  url:        https://github.com/ripperhe
+
+# Gems
+gems:
+  - jekyll-paginate
+
+#Others
+markdown: redcarpet
+redcarpet:
+    extensions: ["tables"]
