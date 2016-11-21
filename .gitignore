@@ -52,14 +52,4 @@ build-iPhoneSimulator/
 # mine
 _site/
 _site
-jekyll/_site
-.sass-cache
-.ruby-version
-.idea
 .DS_Store
-_site
-tmp
-node_modules
-css
-js
-/images
