@@ -1,21 +1,115 @@
-# Setup
-title:        Run Faster
-tagline:      Learn from yesterday, live for today, look to tomorrow.
-baseurl:      ""
-paginate:     1
+# ---------------- #
+#   Main Configs   #
+# ---------------- #
+baseurl:
+url: http://ripperhe.tk
+date_format: "ordinal"
+title: Run Faster
+subtitle: "Learn from yesterday, live for today, look to tomorrow."
+description: "ripper's blog"
+keywords: ripper, 何宗苡
+favicon: /favicon.ico
+timezone: Asia/Beijing
+encoding: "utf-8"
+side_bar_repo_limit: 5
 
-# About/contact
-author:
-  name:       ripper
-  url:        https://github.com/ripperhe
+# ---------------- #
+#      Author      #
+# ---------------- #
+author: Ripper He
+organization: 有品
+organization_url: http://www.picooc.com
+location: Beijing, China
+email: 453942056@qq.com
 
-# Gems
-gems:
-  - jekyll-paginate
+# ---------------- #
+#    Navigation    #
+# ---------------- #
+navs:
+  -
+    href: /
+    label: 首页
 
-#Others
+  -
+    href: /categories/
+    label: 分类
+
+  -
+    href: /wiki/
+    label: 维基
+
+  -
+    href: /links/
+    label: 链接
+
+  -
+    href: /about/
+    label: 关于
+
+# ---------------- #
+#       RSS        #
+# ---------------- #
+subscribe_rss: /feed.xml
+
+# ---------------- #
+#      Jekyll      #
+# ---------------- #
 markdown: kramdown
 kramdown:
-  input:  GFM
-  syntax_highlighter: rouge
+    input: GFM
 highlighter: rouge
+paginate: 8
+lsi: false
+quiet: false
+excerpt_separator: "\n\n"
+permalink: /:year/:month/:day/:title/
+gems:
+    - jekyll-github-metadata
+    - rouge
+#     - jekyll-html-pipeline
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-feed
+    - jemoji
+#     - jekyll-mentions
+collections:
+    wiki:
+        output: true
+        permalink: /wiki/:path/
+
+repository: ripperhe/ripperhe.github.io
+
+# ---------------- #
+#      Socials     #
+# ---------------- #
+github_username: ripperhe
+douban_username: ripperhe
+facebook_username: ripperhe
+weibo_username: ripperhe
+zhihu_username: ripperhe
+twitter_username: ripper_he
+
+# ---------------- #
+#      Comments    #
+# ---------------- #
+# support provider: disqus, duoshuo
+comments_provider: disqus
+# !!!重要!!! 请修改下面两个用户名为你自己申请的
+# !!!Important!!! Please modify usernames below to yours
+duoshuo_username: 何宗苡
+disqus_username: ripperhe
+# 在使用 disqus 的时候可点击显示多说评论框
+lazy_load_duoshuo: true
+
+# ---------------- #
+#    Analytics     #
+# ---------------- #
+google:
+    analytics_id: UA-80669434-1
+
+# ---------------- #
+#      Datas       #
+# ---------------- #
+skill_software_keywords: [Java, C++, Python, Design Patterns]
+skill_mobile_app_keywords: [Android, Reverse Engineering]
+skill_windows_keywords: [Win32 SDK, DuiLib, WTL, COM, WinDbg]
