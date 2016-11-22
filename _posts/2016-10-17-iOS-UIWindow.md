@@ -1,13 +1,13 @@
 ---
-layout: default
-title:  "iOS UIWindow及悬浮球"
-date:   2016-10-17 23:29:00
-categories: main
+layout: post
+title:  iOS UIWindow及悬浮球
+categories: iOS
+description: UIWindow的一些分析
+keywords: iOS, UIWindow
 ---
 
-# iOS UIWindow及悬浮球
-
 ![UIWindow](http://upload-images.jianshu.io/upload_images/939125-37108f75b88c3a3a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 #### 1.UIWindow简介
 
 一个**UIWindow**对象为应用程序的用户界面提供了背景以及重要的事件处理行为。
