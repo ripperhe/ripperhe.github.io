@@ -1,21 +1,16 @@
 ---
 layout: page
 title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+description: 相信会更好
+keywords: ripper, 何宗苡
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-我是马壮，码而生，码而立。
+我是何宗苡，一个小小的iOS程序员。
 
-仰慕「优雅编码的艺术」。
-
-## 坚信
-
-* 熟能生巧
-* 努力改变人生
+也许离成为大神还很遥远，不过，我坚信，努力会让自己变得更好。
 
 ## 联系
 

@@ -105,11 +105,12 @@ lazy_load_duoshuo: true
 #    Analytics     #
 # ---------------- #
 google:
-    analytics_id: UA-80669434-1
+    analytics_id: UA-87925867-1
 
 # ---------------- #
 #      Datas       #
 # ---------------- #
-skill_software_keywords: [Java, C++, Python, Design Patterns]
-skill_mobile_app_keywords: [Android, Reverse Engineering]
-skill_windows_keywords: [Win32 SDK, DuiLib, WTL, COM, WinDbg]
+skill_software_keywords: [Object-C, Swift]
+skill_mobile_app_keywords: [iOS]
+skill_windows_keywords: [暂无]
+# skill_windows_keywords: [Win32 SDK, DuiLib, WTL, COM, WinDbg]

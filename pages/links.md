@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Links
-description: 没有链接的博客是孤独的
+description: 没有链接的博客确实是孤独的
 keywords: 友情链接
 comments: true
 menu: 链接
 permalink: /links/
 ---
 
-> God made relatives. Thank God we can choose our friends.
+> 等我有些写博客的好朋友，我再放到这里吧
 
 <!-- * [Connie酱](http://biedan.org)
 * [只宁静不致远](http://zxning.github.io/)

@@ -8,7 +8,7 @@ menu: 维基
 permalink: /wiki/
 ---
 
-> 记多少命令和快捷键会让脑袋爆炸呢？
+> 常用的东西是不是要放在这里？
 
 <ul class="listing">
 {% for wiki in site.wiki %}
