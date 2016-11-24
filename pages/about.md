@@ -2,23 +2,37 @@
 layout: page
 title: About
 description: 相信会更好
-keywords: ripper, 何宗苡
+keywords: ripper
 comments: true
 menu: 关于
 permalink: /about/
 ---
 
-我是何宗苡，一个小小的iOS程序员。
+> Learning to love and accept everything that happens
 
-也许离成为大神还很遥远，不过，我坚信，努力会让自己变得更好。
+我是何宗苡，目前在做iOS开发。
 
-## 联系
+每个人都有着不同的命运，不管好坏，那都是独一无二的，想要快乐的生活，最重要的一件事情就是爱上自己的命运。
+
+## 两件事
+* 努力会让你和你的命运变得更好
+* 爱上你的命运「Amor fati」
+
+## Info
+
+* 毕业院校：西南石油大学 \| 信息计算科学专业
+* 爱好：篮球、游泳
+* 籍贯：四川
+
+## Contact Me
 
 * 博客：[{{ site.title }}]({{ site.url }})
-* GitHub：[ripperhe](https://github.com/ripperhe)
-* 掘金：[ripperhe](http://gold.xitu.io/user/5815dfbdbf22ec006892f92f)
-* 微博: [ripperhe](http://weibo.com/ripperhe)
-* 知乎: [ripperhe](https://www.zhihu.com/people/ripperhe)
+* GitHub：[@ripperhe](https://github.com/ripperhe)
+* 简书：[@ripperhe](http://www.jianshu.com/users/b9249fb85d5d/latest_articles)
+* 掘金：[@ripperhe](http://gold.xitu.io/user/5815dfbdbf22ec006892f92f)
+* 知乎：[@ripperhe](https://www.zhihu.com/people/ripperhe)
+* 微博：[@ripperhe](http://weibo.com/ripperhe)
+* QQ：453942056
 
 ## Skill Keywords
 
