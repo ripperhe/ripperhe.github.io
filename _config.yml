@@ -4,8 +4,8 @@
 baseurl:
 url: http://ripperhe.tk
 date_format: "ordinal"
-title: Run Faster
-subtitle: "Learn from yesterday, live for today, look to tomorrow."
+title: 想好再说
+subtitle: "坚持不一定成功，放弃就一定失败"
 description: "ripper's blog"
 keywords: ripper, 何宗苡
 favicon: /favicon.ico
@@ -112,5 +112,4 @@ google:
 # ---------------- #
 skill_software_keywords: [Object-C, Swift]
 skill_mobile_app_keywords: [iOS]
-skill_windows_keywords: [暂无]
 # skill_windows_keywords: [Win32 SDK, DuiLib, WTL, COM, WinDbg]

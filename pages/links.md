@@ -8,7 +8,9 @@ menu: 链接
 permalink: /links/
 ---
 
-> 等我有些写博客的好朋友，我再放到这里吧
+> 一起写博客的朋友
+
+* [YoRuo:想变得更好](http://yoruo.tk)
 
 <!-- * [Connie酱](http://biedan.org)
 * [只宁静不致远](http://zxning.github.io/)

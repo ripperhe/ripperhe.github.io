@@ -3,10 +3,9 @@
     {% when 'disqus' %}
       {% if site.disqus_username %}
         {% assign load_disqus = true %}
-        <!-- Disqus Protection, see https://github.com/mzlogin/mzlogin.github.io/issues/2 -->
-        {% if site.disqus_username == 'mzlogin' %}
+        {% if site.disqus_username == 'ripperhe' %}
           {% assign load_disqus = false %}
-          {% if site.url contains 'mazhuang.org' %}
+          {% if site.url contains 'ripperhe.tk' %}
             {% assign load_disqus = true %}
           {% endif %}
         {% endif %}
