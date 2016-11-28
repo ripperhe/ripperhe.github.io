@@ -30,6 +30,7 @@ permalink: /about/
 
 * 博客：[{{ site.title }}]({{ site.url }})
 * GitHub：[@ripperhe](https://github.com/ripperhe)
+* Coding：[@ripper](https://coding.net/u/ripper)
 * 简书：[@ripperhe](http://www.jianshu.com/users/b9249fb85d5d/latest_articles)
 * 掘金：[@ripperhe](http://gold.xitu.io/user/5815dfbdbf22ec006892f92f)
 * 知乎：[@ripperhe](https://www.zhihu.com/people/ripperhe)
