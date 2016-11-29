@@ -67,5 +67,6 @@ keywords: iOS, weibo, imageView
 
 ```
 ---
-✨具体细节可到GitHub下载demo查看。[GitHub地址 😁](https://github.com/ripperhe/ZYTagView.git)		
+✨具体细节可到GitHub下载demo查看。[GitHub地址 😁](https://github.com/ripperhe/ZYTagView.git)
+
 ✨如果有用，还望朋友能给个star，谢谢。
