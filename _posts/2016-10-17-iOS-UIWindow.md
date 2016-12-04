@@ -115,6 +115,7 @@ UIKIT_EXTERN const UIWindowLevel UIWindowLevelStatusBar;   4000
 - (void)resignKeyWindow;// override point for subclass. Do not call directly
 ```
 这个是在继承的时候进行重写的，不要手动去调用。在一个window的keyWindow属性改变时会调用，当你写一个子类继承UIWindow,如果需要在window变成keyWindow,或是keyWinow变为NO的时候想做一些事情，就可以重写这两个方法，以下为官方解释。
+
 >You should rarely need to subclass UIWindow. The kinds of behaviors you might implement in a window can usually be implemented in a higher-level view controller more easily. One of the few times you might want to subclass is to override the becomeKeyWindow or resignKeyWindow methods to implement custom behaviors when a window’s key status changes.
 
 ---
