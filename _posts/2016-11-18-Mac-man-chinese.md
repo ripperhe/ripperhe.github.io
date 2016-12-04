@@ -69,6 +69,7 @@ $ ls -a
 $ open -a atom .bashrc
 ```
 在文件最后添加以下语句，然后保存、退出
+
 > alias cman='man -M /usr/local/share/man/zh_CN'
 
 最后重载该文件
@@ -103,6 +104,7 @@ $ sudo make install
 $ open -a atom /etc/man.conf
 ```
 在文件末尾加上如下语句，然后保存、退出
+
 >NROFF preconv -e UTF8 | /usr/local/bin/nroff -Tutf8 -mandoc -c
 
 重启终端，再尝试前面定义的`cman`命令，基本可以正常显示了。在显示上还是有些小问题，不过都还能接受。以下语句即可查询`ls`命令的用法
