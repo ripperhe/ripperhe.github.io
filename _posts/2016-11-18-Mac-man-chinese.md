@@ -42,16 +42,16 @@ $ cd manpages-zh-1.5.1
 然后执行
 
 ```
-$ ./configure --prefix=/usr/local/zhman --disable-zhtw
+$ ./configure --disable-zhtw
 ```
-其中，`--disable-zhtw`代表不安装繁体中文，如果要安装繁体中文，还需要配置一些东西
+其中，`--disable-zhtw`代表不安装繁体中文，如果要安装繁体中文，还需要配置一些另外的东西。接下来直接安装
 
 ```
 $ make && make install
 ```
 
 #### 配置别名
-现在已经将中文文档安装完成，想调用中文文档的话，我们可以对`/etc/man.conf`文件进行修改，将其内容中所有`/usr/local/share/man`全部替换为`/usr/local/share/man/zh`即可，这样利于man命令的时候，则会显示中文，按`q`退出。不过这样的方式多少有些问题，利用设置别名的方法可以更好地处理问题。
+现在已经将中文文档安装完成，想调用中文文档的话，我们可以对`/etc/man.conf`文件进行修改，将其内容中所有`/usr/local/share/man`全部替换为`/usr/local/share/man/zh_CN`即可，这样利于man命令的时候，则会显示中文，按`q`退出。不过这样的方式多少有些问题，利用设置别名的方法可以更好地处理这个问题。
 
 进入到主用户文件夹
 
@@ -69,7 +69,7 @@ $ ls -a
 $ open -a atom .bashrc
 ```
 在文件最后添加以下语句，然后保存、退出
-> alias cman='man -M /usr/local/zhman/share/man/zh_CN'
+> alias cman='man -M /usr/local/share/man/zh_CN'
 
 最后重载该文件
 
