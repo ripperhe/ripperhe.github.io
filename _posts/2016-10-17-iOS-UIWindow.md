@@ -39,12 +39,14 @@ UIWindow继承自UIView，我们一般不会直接去设置其UI展现，但它�
 **windows** 应用程序中所有的window对象，包括正在显示的或隐藏的window。
 
 新建一个iOS工程,在没有触发键盘时，在控制台打印`winodws`如下：
+
 >(lldb) po [[UIApplication sharedApplication] windows]    
 \<__NSArrayM 0x61800024d7d0>(    
 \<**UIWindow**: 0x7fd8e1a06370; frame = (0 0; 414 736); autoresize = W+H; gestureRecognizers = \<NSArray: 0x61800024d170>; layer = \<UIWindowLayer: 0x61000003e7c0>>    
 )
 
 该window就是 app delegate 的window，即系统自动生成的那个window。当文本编辑，触发键盘之后，打印`windows`如下：
+
 >(lldb) po [[UIApplication sharedApplication] windows]    
 \<__NSArrayM 0x61000005d1f0>(   
 \<**UIWindow**: 0x7fd8e1a06370; frame = (0 0; 414 736); autoresize = W+H; gestureRecognizers = \<NSArray: 0x61800024d170>; layer = \<UIWindowLayer: 0x61000003e7c0>>,     
@@ -154,6 +156,7 @@ window之间是相互独立的，如果想要将两个window的坐标相互映�
 #### 5.如何创建一个UIWindow并显示
 
 主要有以下几个步骤：
+
 > 1. 创建一个window对象，并用一个对象**强持有**它
 > 2. 创建一个控制器，赋值为window的根控制器
 > 3. 显示窗口
@@ -180,6 +183,7 @@ testWindow.rootViewController = controller;
 #### 6.如何销毁一个UIWindow
 
 前面已经说过，对于一个UIWindow对象，之所以显示，是因为有一个对象强持有它，要销毁一个window，只需要将这个强持有去掉即可。但是,这种持有去掉之后，可能window可能不会立即消失，所以，为了确保能够立即将其不展现，最好按以下步骤：
+
 > 1. 将window的hidden属性置为YES
 > 2. 将持有该window的那个对象对window的持有去掉（有点绕😄）
 
@@ -194,6 +198,7 @@ self.testWindow = nil;
 #### 7.我们什么时候需要自己创建一个UIWindow
 
 苹果官方是这么说的😝
+
 >Most apps need only one window, which displays the app’s content on the device’s main screen. You can create additional windows and display them on the device’s main screen, but extra windows are more commonly used to display content on an attached external display.
 
 新建的UIWindow一般用于外接的屏幕，那在我们手机的主屏幕什么时候会有这种需求呢？我觉得，如果我们需要个一个控件，需要独立于其他的view,并悬浮于应用程序中的时候，也许就需要用到UIWindow了，这里所谓的悬浮，不过就是windowLevel比较高罢了。
@@ -217,5 +222,6 @@ self.testWindow = nil;
 * 一些调试的时候想要反复执行的某句代码
 
 ---
-✨具体细节可到GitHub下载demo查看。[GitHub地址 😁](https://github.com/ripperhe/ZYSuspensionView)		
+✨具体细节可到GitHub下载demo查看。[GitHub地址 😁](https://github.com/ripperhe/ZYSuspensionView)
+
 ✨如果有用，还望朋友能给个star，谢谢。
