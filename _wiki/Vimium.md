@@ -6,7 +6,7 @@ description: Vimium 常用命令
 keywords: Chrome, Vimium
 ---
 
-### 导航当页
+## 导航当页
 
 | 按键 | 功能 |
 |:---:|:---|
@@ -29,7 +29,7 @@ keywords: Chrome, Vimium
 | gf  |    cycle forward to the next frame |
 | gF  |    focus the main/top frame |
 
-### 打开新的页面
+## 打开新的页面
 
 | 按键 | 功能 |
 |:---:|:---|
@@ -38,7 +38,7 @@ keywords: Chrome, Vimium
 | b   |    搜索书签，在当前页面打开 |
 | B   |    搜索书签，在新的页面打开 |
 
-### 查找
+## 查找
 
 | 按键 | 功能 |
 |:---:|:---|
@@ -47,14 +47,14 @@ keywords: Chrome, Vimium
 | N   |    切换到上一个匹配 |
 
 
-### 前进后退
+## 前进后退
 
 | 按键 | 功能 |
 |:---:|:---|
 | H   |    后退 |
 | L   |    前进 |
 
-### 切换tab
+## 切换tab
 
 | 按键 | 功能 |
 |:---:|:---|
@@ -70,7 +70,7 @@ keywords: Chrome, Vimium
 | T     |  在当前所有的tab页面中搜索 |
 | \<a-p\> |  pin/unpin current tab |
 
-### 标记
+## 标记
 
 | 按键 | 功能 |
 |:---:|:---|
@@ -80,7 +80,7 @@ keywords: Chrome, Vimium
 | `A  |    跳转到全局标记 |
 | ``  |    跳回之前的位置 |
 
-### 进阶控制命令
+## 进阶控制命令
 
 | 按键 | 功能 |
 |:---:|:---|
