@@ -1,4 +1,10 @@
-# Mac 快捷键
+---
+layout: wiki
+title: Mac 快捷键
+categorys: Mac
+description: Mac 快捷键
+keywords: Mac, shortcut, key
+---
 
 ## 按键图标
 
