@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  Mac 安装man命令中文文档
+title:  Mac 安装 man 命令中文文档
 categories: Mac
-description: 安装man命令中文文档
+description: 安装 man 命令中文文档
 keywords: Mac, man
 ---
 
@@ -12,12 +12,12 @@ keywords: Mac, man
 
 备注：系统版本不同，可能会有一些不同的问题。
 
-### man是什么？
+## man 是什么？
 man，是类unix系统最重要的手册工具，mac预装了man，所以我们可以通过man查询各种命令的使用方法。不过在使用的时候，全都是中文，如果英文不太好，阅读起来就比较困难。
 
-### 安装中文文档
+## 安装中文文档
 
-#### 下载安装包
+### 下载安装包
 利用wget下载安装包
 
 ```
@@ -25,13 +25,13 @@ $ wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.goog
 ```
 没有安装wget的话，可以查看我这篇文章[安装wget](http://www.jianshu.com/p/f6b290710262)，也可以直接到 [google code](https://code.google.com/archive/p/manpages-zh/downloads) ，选中**manpages-zh-1.5.1.tar.gz**进行下载。
 
-#### 解压
+### 解压
 ```
 $ tar zxvf manpages-zh-1.5.1.tar.gz
 ```
 直接双击解压也可以
 
-#### 安装
+### 安装
 先进入解压出来的**manpages-zh-1.5.1**文件夹
 
 ```
@@ -48,7 +48,7 @@ $ ./configure --disable-zhtw
 $ make && make install
 ```
 
-#### 配置别名
+### 配置别名
 现在已经将中文文档安装完成，想调用中文文档的话，我们可以对`/etc/man.conf`文件进行修改，将其内容中所有`/usr/local/share/man`全部替换为`/usr/local/share/man/zh_CN`即可，这样利于man命令的时候，则会显示中文，按`q`退出。不过这样的方式多少有些问题，利用设置别名的方法可以更好地处理这个问题。
 
 进入到主用户文件夹
@@ -82,7 +82,7 @@ $ alias
 ```
 现在可以调用`cman + 命令名`查询命令，不过现在可能会出现中文乱码问题
 
-#### 解决中文乱码
+### 解决中文乱码
 乱码的主要原因是mac的groff版本比较老，可以利用以下命令查看版本
 
 ```
@@ -117,7 +117,7 @@ $ man -t ls | open -a Preview -f
 ```
 以上命令，将ls换成想要查询的命令即可（`cman`暂时没找到方法中文输出到Preview，如果找到方法还望大神多多指教）。
 
-#### 重启终端命令失效的问题
+### 重启终端命令失效的问题
 重启之后`.bashrc`文件没有自动加载，会导致自定义的命令alias失效，这里就需要加载手动将其加载一下。进入到用户文件夹下，找到`.bash_profile`文件
 
 ```

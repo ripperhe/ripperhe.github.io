@@ -1,27 +1,25 @@
 ---
 layout: post
-title:  "Chrome浏览器最牛插件之一 Vimium"
+title:  "Chrome 浏览器最牛插件之一 Vimium"
 categories: 小技巧
-description: chrome浏览器插件
+description: chrome 浏览器插件
 keywords: chrome, vimium
 ---
 
 ![](http://upload-images.jianshu.io/upload_images/939125-918d6510ff26082e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
->vimium堪称神器，用熟了之后上网效率很高，并且还可以拿来装逼，😁哈哈哈！
+> vimium 堪称神器，用熟了之后上网效率很高，并且还可以拿来装逼，😁哈哈哈！
 
 最近学习了一下，整理了一下官方的默认按键。其中我使用到的都进行了中文翻译，一些没有翻译的是我没有使用的，这部分理解不深，不想误导大家，所以将英文原文放在这里，还望大神指点。
 
-### 安装vimium
-首先打开chrome浏览器，安装[vimium插件](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=zh-CN)
+## 安装vimium
+首先打开 Chrome 浏览器，安装 [vimium 插件](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=zh-CN)
 
-### 操作命令
+## 操作命令
 
 废话不多说，直接上快捷键😁
 
----
-
-#### 导航当页
+### 导航当页
 
     ?       显示help，查询vimium的所有使用方法
     h       向左滚动
@@ -42,33 +40,25 @@ keywords: chrome, vimium
     gf      cycle forward to the next frame
     gF      focus the main/top frame
 
----
-
-#### 打开新的页面
+### 打开新的页面
 
     o       搜索网址，书签，或历史记录，在当前页面打开
     O       搜索网址，书签，或历史记录，在新的页面打开
     b       搜索书签，在当前页面打开
     B       搜索书签，在新的页面打开
 
----
-
-#### 查找
+### 查找
 
     /       进入查找模式，输入关键字查找，ESC退出
     n       切换到下一个匹配
     N       切换到上一个匹配
 
----
-
-#### 前进后退
+### 前进后退
 
     H       后退
     L       前进
 
----
-
-#### 切换tab
+### 切换tab
 
     J, gT   切换到左边tab
     K, gt   切换到右边tab
@@ -82,9 +72,7 @@ keywords: chrome, vimium
     T       在当前所有的tab页面中搜索
     <a-p>   pin/unpin current tab
 
----
-
-#### 标记
+### 标记
 
     ma      当页标记，只能在当前tab页面跳转，m + 一个小写字母
     mA      全局标记，可以再切换到其他tab的跳转过来，m + 一个大写字母
@@ -92,9 +80,7 @@ keywords: chrome, vimium
     `A      跳转到全局标记
     ``      跳回之前的位置
 
----
-
-#### 进阶控制命令
+### 进阶控制命令
 
     ]], [[  Follow the link labeled 'next' or '>' ('previous' or '<')
               - helpful for browsing paginated sites
@@ -109,10 +95,7 @@ keywords: chrome, vimium
     v       enter visual mode; use p/P to paste-and-go, use y to yank
     V       enter visual line mode
    
-
----
-
-#### 其他
+### 其他
 
 	5t      数字num + t，打开num个tab页面
 	<Esc>   ESC按钮，可以从任意控制命令中退出，也可以从任意模式中退出（例如插入模式、查找模式）

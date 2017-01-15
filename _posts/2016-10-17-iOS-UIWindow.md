@@ -1,19 +1,19 @@
 ---
 layout: post
-title:  iOS UIWindow及悬浮球
+title:  iOS UIWindow 及悬浮球
 categories: iOS
-description: UIWindow的一些分析
+description: UIWindow 的一些分析
 keywords: iOS, UIWindow
 ---
 
 ![UIWindow](http://upload-images.jianshu.io/upload_images/939125-37108f75b88c3a3a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#### 1.UIWindow简介
+## 1. UIWindow 简介
 
 一个**UIWindow**对象为应用程序的用户界面提供了背景以及重要的事件处理行为。
 UIWindow继承自UIView，我们一般不会直接去设置其UI展现，但它对展现程序中的views至关重要。每一个view，想要出现在屏幕上都依赖于window，但是程序中的window之间是相互独立的。应用程序收到事件之后会先转发给适当的window对象，从而又将事件转发给view对象。
 
-#### 2.程序中有哪些UIWindow
+## 2. 程序中有哪些 UIWindow
 
 所有view的展现都依赖于window，创建一个新的iOS工程，将其运行会执行以下事情
 
@@ -27,7 +27,7 @@ UIWindow继承自UIView，我们一般不会直接去设置其UI展现，但它�
 * 状态栏的window（比较特殊，虽然在程序内部可以调用某些api显示隐藏或改变其UI，但它的window是不被我们的应用程序内部所持有的）
 * 键盘的window
 
-#### 3.获取程序中的UIWindow
+## 3. 获取程序中的 UIWindow
 `UIApplication`这个类是一个单例类，通过其**sharedApplication**方法进行调用，一个程序可以看做是一个UIApplication对象,可以通过UIApplication对象的以下属性来获取想要的window。
 
 ```objc
@@ -56,7 +56,7 @@ UIWindow继承自UIView，我们一般不会直接去设置其UI展现，但它�
 
 打印中的`UIRemoteKeyboardWindow`就是键盘的window，与此同时，还出现了`UITextEffectsWindow`，这个window我没有找到官方的说明，不过可以推测它也是和文本输入有关系的。
 
-#### 4.UIWindow的属性与方法
+## 4. UIWindow 的属性与方法
 
 ```objc
 @property(nonatomic,strong) UIScreen *screen
@@ -154,7 +154,7 @@ UIKIT_EXTERN const UIWindowLevel UIWindowLevelStatusBar;   4000
 ```
 window之间是相互独立的，如果想要将两个window的坐标相互映射的时候，就需要用到以上几个方法。
 
-#### 5.如何创建一个UIWindow并显示
+## 5. 如何创建一个 UIWindow 并显示
 
 主要有以下几个步骤：
 
@@ -181,7 +181,7 @@ testWindow.rootViewController = controller;
 * 如果window看不见，可以试试修改以下其`windowLevel`属性。高等级的window一定会显示在低等级的window上面，同等级的window,后makeKeyWindow的window就会显示在上面。
 * 无论是通过代码,storyboard或xib初始化一个控制器来显示，都是以上三步，只是创建控制器的方法有所区别罢了，这里不做讨论了。
 
-#### 6.如何销毁一个UIWindow
+## 6. 如何销毁一个 UIWindow
 
 前面已经说过，对于一个UIWindow对象，之所以显示，是因为有一个对象强持有它，要销毁一个window，只需要将这个强持有去掉即可。但是,这种持有去掉之后，可能window可能不会立即消失，所以，为了确保能够立即将其不展现，最好按以下步骤：
 
@@ -196,7 +196,7 @@ self.testWindow = nil;
 ```
 假如当前这个window是keyWindow，这个window被销毁之后，系统会自动将上一个keyWindow设置为keyWindow，不需要我们去管理。简单说就是假如以 A->B->C 这个顺序变为keyWindow之后，C销毁了，B会自动变为keyWindow。需要注意的是，不要去调用`resignKeyWindow`方法，该方法是用于子类重写的，手动调用之后，结果也是未知的。
 
-#### 7.我们什么时候需要自己创建一个UIWindow
+## 7. 我们什么时候需要自己创建一个 UIWindow
 
 苹果官方是这么说的😝
 
@@ -206,7 +206,7 @@ self.testWindow = nil;
 
 公司工程里所集成的测试控件[Bugtags](https://www.bugtags.com/)就是利用UIWindow实现的，可以悬浮在任意页面，主要用于测试人员提bug，直接手机上提bug。当然提bug这件事和本文关系不大，在此只是想表明这种情况就可以用UIWindow。
 
-#### 8.关于悬浮球
+## 8. 关于悬浮球
 对于这个可拉拽的悬浮球，我也比较好奇，所以自己着手实现了一下，原理也挺简单。
 
 * 创建一个按钮大小的window并显示
