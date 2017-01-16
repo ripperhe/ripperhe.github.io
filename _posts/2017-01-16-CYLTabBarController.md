@@ -165,7 +165,7 @@ CYLTabBarController *tabBarController = [CYLTabBarController tabBarControllerWit
 
 	截获手势触摸，并根据位置进行返回对应控件，进行事件处理
 	
-	```
+	```objc
 	- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
 		BOOL canNotResponseEvent = self.hidden || (self.alpha <= 0.01f) || (self.userInteractionEnabled == NO);
 		if (canNotResponseEvent) {
