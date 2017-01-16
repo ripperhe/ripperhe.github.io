@@ -167,36 +167,36 @@ CYLTabBarController *tabBarController = [CYLTabBarController tabBarControllerWit
 	
 	```objc
 	- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-    BOOL canNotResponseEvent = self.hidden || (self.alpha <= 0.01f) || (self.userInteractionEnabled == NO);
-    if (canNotResponseEvent) {
-        return nil;
-    }
-    if (!CYLExternPlusButton && ![self pointInside:point withEvent:event]) {
-        return nil;
-    }
-    if (CYLExternPlusButton) {
-        CGRect plusButtonFrame = self.plusButton.frame;
-        BOOL isInPlusButtonFrame = CGRectContainsPoint(plusButtonFrame, point);
-        if (!isInPlusButtonFrame && (point.y < 0) ) {
-            return nil;
-        }
-        if (isInPlusButtonFrame) {
-            return CYLExternPlusButton;
-        }
-    }
-    NSArray *tabBarButtons = self.tabBarButtonArray;
-    if (self.tabBarButtonArray.count == 0) {
-        tabBarButtons = [self tabBarButtonFromTabBarSubviews:self.subviews];
-    }
-    for (NSUInteger index = 0; index < tabBarButtons.count; index++) {
-        UIView *selectedTabBarButton = tabBarButtons[index];
-        CGRect selectedTabBarButtonFrame = selectedTabBarButton.frame;
-        if (CGRectContainsPoint(selectedTabBarButtonFrame, point)) {
-            return selectedTabBarButton;
-        }
-    }
-    return nil;
-}
+		BOOL canNotResponseEvent = self.hidden || (self.alpha <= 0.01f) || (self.userInteractionEnabled == NO);
+		if (canNotResponseEvent) {
+		    return nil;
+		}
+		if (!CYLExternPlusButton && ![self pointInside:point withEvent:event]) {
+		    return nil;
+		}
+		if (CYLExternPlusButton) {
+		    CGRect plusButtonFrame = self.plusButton.frame;
+		    BOOL isInPlusButtonFrame = CGRectContainsPoint(plusButtonFrame, point);
+		    if (!isInPlusButtonFrame && (point.y < 0) ) {
+		        return nil;
+		    }
+		    if (isInPlusButtonFrame) {
+		        return CYLExternPlusButton;
+		    }
+		}
+		NSArray *tabBarButtons = self.tabBarButtonArray;
+		if (self.tabBarButtonArray.count == 0) {
+		    tabBarButtons = [self tabBarButtonFromTabBarSubviews:self.subviews];
+		}
+		for (NSUInteger index = 0; index < tabBarButtons.count; index++) {
+		    UIView *selectedTabBarButton = tabBarButtons[index];
+		    CGRect selectedTabBarButtonFrame = selectedTabBarButton.frame;
+		    if (CGRectContainsPoint(selectedTabBarButtonFrame, point)) {
+		        return selectedTabBarButton;
+		    }
+		}
+		return nil;
+	}
 	```
 	
 	1. 先判断是否需要接受触摸
