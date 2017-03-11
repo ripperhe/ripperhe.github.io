@@ -33,7 +33,11 @@ keywords: Mac, shortcut, key
 | ⏏ | eject |
 
 
+## 键盘图
 
+![](https://raw.githubusercontent.com/ripperhe/Resource/master/20170311/mac_keyboard.png)
+
+![](https://raw.githubusercontent.com/ripperhe/Resource/master/20170311/mac_keyboard_fn.png)
 
 ## 官方文档
 
