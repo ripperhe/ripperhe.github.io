@@ -10,9 +10,7 @@ permalink: /about/
 
 > Learning to love and accept everything that happens
 
-我是何宗苡，目前在做iOS开发。
-
-每个人都有着不同的命运，无论好坏，皆为独一无二的，想要快乐，最重要的就是爱上自己的命运。
+我是何宗苡，目前在做 iOS 开发。
 
 ## 三件事
 
@@ -33,9 +31,7 @@ permalink: /about/
 * Coding：[@ripper](https://coding.net/u/ripper)
 * 简书：[@ripperhe](http://www.jianshu.com/users/b9249fb85d5d/latest_articles)
 * 掘金：[@ripperhe](http://gold.xitu.io/user/5815dfbdbf22ec006892f92f)
-* 知乎：[@ripperhe](https://www.zhihu.com/people/ripperhe)
 * 微博：[@ripperhe](http://weibo.com/ripperhe)
-* QQ：453942056
 
 ## Skill Keywords
 
