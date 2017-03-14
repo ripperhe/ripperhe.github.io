@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  iOS UIWindow 及悬浮球
+title:  UIWindow 及悬浮球
 categories: iOS
 description: UIWindow 的一些分析
 keywords: iOS, UIWindow

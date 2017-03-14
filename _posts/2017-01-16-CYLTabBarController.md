@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  iOS CYLTabBarController 源码简读
+title:  CYLTabBarController 源码简读
 categories: iOS
 description: CYLTabBarController 的阅读
 keywords: iOS, 源码, CYLTabBarController

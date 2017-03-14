@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  iOS 一个实用的悬浮球工具
+title:  一个实用的悬浮球工具
 categories: iOS
 description: 悬浮球
 keywords: iOS, ZYSuspensionView

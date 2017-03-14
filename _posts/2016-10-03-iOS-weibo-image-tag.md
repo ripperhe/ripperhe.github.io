@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  iOS 仿微博图片添加标签
+title:  仿微博图片添加标签
 categories: iOS
 description: 图片添加标签
 keywords: iOS, weibo, imageView
