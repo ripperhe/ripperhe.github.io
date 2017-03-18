@@ -10,5 +10,5 @@ permalink: /links/
 
 > 友谊的小船
 
-* [YoRuo:想变得更好](http://yoruo.tk)
+* [YoRuo:想变得更好](http://betterlxc.com)
 
