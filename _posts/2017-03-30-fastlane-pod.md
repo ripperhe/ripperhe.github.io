@@ -40,8 +40,8 @@ keywords: iOS, fastlane, CocoaPods
 
 首先需要注册一个 CocoaPods 账号，用于发布 pod 仓库。
 
-```ruby
- $ pod trunk register EMAIL [NAME]
+```bash
+$ pod trunk register EMAIL [NAME]
 ```
 
 `trunk` 命令用于创建一个账号或是一个 seession。
@@ -51,7 +51,7 @@ keywords: iOS, fastlane, CocoaPods
 
 你可以对你的 session 进行描述，这样在利用 `pod trunk me` 命令查看所有 session 信息的时候，可以很清晰地看到在哪些电脑上创建过 session。
 
-```ruby
+```bash
 $ pod trunk register orta@cocoapods.org 'Orta Therox' --description='macbook air'
 ```
 
@@ -89,7 +89,7 @@ end
 
 先进入需要发布的框架的根目录，执行
 
-```ruby
+```bash
 $ pod spec create [NAME]
 ```
 
@@ -120,7 +120,7 @@ spec 文件的这些描述，基本上看命名是可以看明白的。实在不
 
 首先，需要将本仓库的所有修改提交到远程仓库。
 
-```ruby
+```bash
 $ git add .
 $ git ci -m 'release pod'
 $ git push
@@ -130,7 +130,7 @@ $ git push
 
 发布 pod 仓库，需要和自己框架的远程仓库代码版本对应，所以这里需要为当前代码打上 tag，这个 tag 是和前面的 spec 文件中填写的 tag 对应的。框架发布成功之后，CocoaPods 会根据 tag 信息去获取相应代码。
 
-```ruby
+```bash
 $ git push origin master
 $ git tag '0.1.0' 
 $ git push --tags 
@@ -140,13 +140,13 @@ $ git push --tags
 
 用于验证 spec 文件是否正确，可以及早发现问题。同样，也是在需要发布的框架的根目录，执行
 
-```ruby
+```bash
 $ pod spec lint ZYTemplateName.podspec
 ```
 
 这里需要加上 `.podspec` 后缀来验证这个文件。如果有报错，仔细查看报错信息，一般可以定位问题，可以加上 `--verbose` 查看详细的验证过程，方便定位问题。
 
-```ruby
+```bash
 $ pod spec lint ZYTemplateName.podspec --verbose
 ```
 
@@ -168,7 +168,7 @@ $ pod lib lint ZYTemplateName.podspec --allow-warnings
 
 验证文件通过之后，需要将文件推送到 CocoaPods 描述文件仓库，在框架根目录，执行以下命令：
 
-```ruby
+```bash
 $ pod trunk push ZYTemplateName.podspec
 ```
 
@@ -176,7 +176,7 @@ $ pod trunk push ZYTemplateName.podspec
 
 这一步稍微会久一点，需要等待一会儿，因为 CocoaPods 需要先将 spec 文件上传到 `CocoaPods/Specs` 仓库，再 `git pull` 到本地 `CocoaPods/Specs` 仓库。等待显示成功之后，可以验证以下自己的框架是否真的发布成功了。搜索一下：
 
-```ruby
+```bash
 $ pod search [NAME]
 ```
 
@@ -249,7 +249,7 @@ $ pod setup
 
 利用以下命令，克隆远程仓库，并为自己的私有仓库命名
 
-```ruby
+```bash
 $ pod repo add NAME URL
 ```
 
@@ -257,7 +257,7 @@ $ pod repo add NAME URL
 
 ### <a name="b-创建 spec 文件">创建 spec 文件</a>
 
-[同上。👆](#a-创建 spec 文件)****
+[同上。👆](#a-创建 spec 文件)
 
 ### <a name="b-提交代码并为框架打 tag">提交代码并为框架打 tag</a>
 
@@ -271,13 +271,13 @@ $ pod repo add NAME URL
 
 这一步同发布到官方库不同，利用以下命令：
 
-```ruby
+```bash
 $ pod repo push REPO [NAME.podspec]
 ```
 
 以我自己的仓库为例：
 
-```ruby
+```bash
 $ pod repo push ZYSpec ZYTemplateName.podspec
 ```
 
@@ -318,7 +318,7 @@ Fastlane 是用 Ruby 编写的一套自动化工具框架，最开始主要针�
 
 Fastlane 的安装仅需一条命令即可，[官网](https://docs.fastlane.tools/getting-started/ios/setup/) 有更详细的解释。
 
-```ruby
+```bash
 $ sudo gem install fastlane
 ```
 
@@ -326,13 +326,13 @@ $ sudo gem install fastlane
 
 如果使用 Fastlane 进行提包等操作，就在工程根目录下执行以下命令：
 
-```ruby
-fastlane init
+```bash
+$ fastlane init
 ```
 
 这样就会询问你的 Apple ID 以及其他的一些配置，并且生成一大堆东西，而我们这里只是想要发布 pod，与 Apple ID 这些没用关系，所以我们手动创建 Fastfile。同样，在工程根目录：
 
-```ruby
+```bash
 $ mkdir fastlane
 $ touch fastlane/Fastfile
 ```
@@ -434,7 +434,7 @@ end
 
 自定义 action，在工程根目录执行
 
-```ruby
+```bash
 $ fastlane new_action --name remove_git_tag
 ```
 
@@ -463,16 +463,16 @@ end
 
 说了这么多，终于到了使用我们的 fastlane 的环节。对于我们发布官方库而言，假设我们 CocoaPods 安装，注册账号，创建 spec 文件都已经准备完毕，我们直接到根目录执行
 
-```ruby
-fastlane release_pod project:'框架名' version:'版本'
+```bash
+$ fastlane release_pod project:'框架名' version:'版本'
 ```
 
 接下来只需要静静等待一步步自动执行。
 
 发布私有库也同样简单，假设私有库已经创建好，克隆到本地并命名为 ZYSpec，那么，到根目录执行
 
-```ruby
-fastlane release_pod repo:ZYSpec project:'框架名' version:'版本'
+```bash
+$ fastlane release_pod repo:ZYSpec project:'框架名' version:'版本'
 ```
 
 ![](https://raw.githubusercontent.com/ripperhe/Resource/master/20170330/success_release.png)
@@ -526,13 +526,13 @@ import_from_git(url: 'https://github.com/ripperhe/fastlane-files', branch: 'mast
 
 如果做成 pod 的仓库比较多，每次都有去创建 spec 文件等，也显得比较麻烦，但是 CocoaPods 为我们提供了一个命令，直接创建一个仓库。
 
-```ruby
+```bash
 $ pod lib create ZYLib
 ```
 
 执行该命令之后会问几个问题，最终生成文件目录
 
-```ruby
+```bash
 $ tree ZYLib -L 2
 
 ZYLib
@@ -574,7 +574,7 @@ ZYLib
 
 到工程根目录下执行脚本：
 
-```ruby
+```bash
 $ ruby ~/Desktop/pod-template/prepare_release.rb
 
 [20:56:35]: Please input the lib name:👇
@@ -582,7 +582,7 @@ $ ruby ~/Desktop/pod-template/prepare_release.rb
 
 执行脚本，这里做了一个逻辑是询问 lib 名字，如果直接回车，就默认为当前文件夹名字。假设创建一个空文件夹 DemoLib，则结果如下：
 
-```ruby
+```bash
 $ tree DemoLib
 
 DemoLib
@@ -597,7 +597,7 @@ DemoLib
 
 也存在一种情况，有的文件已经存在了，为了不覆盖当前存在的文件，所以前缀加一个 `template.`，结果如下:
 
-```ruby
+```bash
 $ tree DemoLib
 
 DemoLib
@@ -620,7 +620,7 @@ alias pre='ruby ~/Desktop/pod-template/prepare_release.rb'
 
 这里等于符号两边不要留空格，之后，我要发布某一个组件的时候，只需要到工程根目录输入：
 
-```ruby
+```bash
 $ pre
 [21:06:38]: Please input the lib name:👇
 ```
@@ -629,7 +629,7 @@ $ pre
 
 现在终于不会忘记了...（当然，要是移动了模板文件的路径又得改... 😂 ）如果你也想使用这个脚本，可以 fork [这个仓库](https://github.com/ripperhe/pod-template) 到你的 GitHub 账号下，修改模板文件即可。以下为该仓库的文件：
 
-```ruby
+```bash
 $ tree pod-template
 
 ├── LICENSE
