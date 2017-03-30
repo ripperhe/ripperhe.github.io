@@ -25,18 +25,18 @@ keywords: iOS, fastlane, CocoaPods
 
 想要发布框架到 CocoaPods 官方库，需要有以下流程：
 
-> 1. [安装 CocoaPods](#a-安装 CocoaPods)
-> 2. [注册 CocoaPods 账号](#a-注册 CocoaPods 账号)
-> 3. [创建 spec 文件](#a-创建 spec 文件)
-> 4. [提交代码并为框架打 tag](#a-提交代码并为框架打 tag)
-> 5. [验证 spec 文件](#a-验证 spec 文件)
-> 6. [通过 pod trunk push 推送 spec 文件](#a-推送 spec 文件)
+> 1. [安装 CocoaPods](#a1)
+> 2. [注册 CocoaPods 账号](#a2)
+> 3. [创建 spec 文件](#a3)
+> 4. [提交代码并为框架打 tag](#a4)
+> 5. [验证 spec 文件](#a5)
+> 6. [通过 pod trunk push 推送 spec 文件](#a6)
 
-### <a name="a-安装 CocoaPods">安装 CocoaPods</a>
+### <span id="a1">安装 CocoaPods</span>
 	
 网上有很多教程，这里不再赘述。需要注意的是，`RubyGems` 的 [淘宝镜像](https://ruby.taobao.org/) 已经不再维护，已迁移至 [Ruby China](https://gems.ruby-china.org/)，安装 CocoaPods 前记得替换 `gem sources`。
 	
-### <a name="a-注册 CocoaPods 账号">注册 CocoaPods 账号</a>
+### <span id="a2">注册 CocoaPods 账号</span>
 
 首先需要注册一个 CocoaPods 账号，用于发布 pod 仓库。
 
@@ -57,7 +57,7 @@ $ pod trunk register orta@cocoapods.org 'Orta Therox' --description='macbook air
 
 命令成功之后，你的邮箱应该会收到一份邮件。查看邮件信息，访问对应网址即可验证你的账号。当然，这个事情做一次就好了，以后基本上不用再操作。
 
-### <a name="a-创建 spec 文件">创建 spec 文件</a>
+### <span id="a3">创建 spec 文件</span>
 
 spec 文件即一个 pod 仓库的描述信息。所有通过 `pod search` 搜索出来的框架，都是根据这个文件中的描述信息进行匹配的。以下为部分描述信息：
 
@@ -116,7 +116,7 @@ spec 文件的这些描述，基本上看命名是可以看明白的。实在不
 
 `version` 和 `tag` 可以是不同的，但是为了方便管理和维护，我们一般将其设置为一样的，所以 `tag` 可以 直接使用 `s.version.to_s`。既然这里用到了 `tag`，那么接下来，就需要为仓库代码打上 `tag`。
 
-### <a name="a-提交代码并为框架打 tag">提交代码并为框架打 tag</a>
+### <span id="a4">提交代码并为框架打 tag</span>
 
 首先，需要将本仓库的所有修改提交到远程仓库。
 
@@ -136,7 +136,7 @@ $ git tag '0.1.0'
 $ git push --tags 
 ```
 
-### <a name="a-验证 spec 文件">验证 spec 文件</a>
+### <span id="a5">验证 spec 文件</span>
 
 用于验证 spec 文件是否正确，可以及早发现问题。同样，也是在需要发布的框架的根目录，执行
 
@@ -164,7 +164,7 @@ $ pod lib lint ZYTemplateName.podspec
 $ pod lib lint ZYTemplateName.podspec --allow-warnings
 ```
 
-### <a name="a-推送 spec 文件">推送 spec 文件</a>
+### <span id="a6">推送 spec 文件</span>
 
 验证文件通过之后，需要将文件推送到 CocoaPods 描述文件仓库，在框架根目录，执行以下命令：
 
@@ -214,21 +214,21 @@ $ pod setup
 
 整体流程如下：
 
-> 1. [安装 CocoaPods](#b-安装 CocoaPods) 
-> 2. [创建远程私有 spec 仓库](#b-创建远程私有 spec 仓库)
-> 3. [克隆远程私有 spec 仓库到本地](#b-克隆远程私有 spec 仓库到本地)
-> 4. [创建 spec 文件](#b-创建 spec 文件)
-> 5. [提交代码并为框架打 tag](#b-提交代码并为框架打 tag)
-> 6. [验证 spec 文件](#b-验证 spec 文件)
-> 7. [通过 pod repo push 推送 spec 文件](#b-推送 spec 文件)
+> 1. [安装 CocoaPods](#b1) 
+> 2. [创建远程私有 spec 仓库](#b2)
+> 3. [克隆远程私有 spec 仓库到本地](#b3)
+> 4. [创建 spec 文件](#b4)
+> 5. [提交代码并为框架打 tag](#b5)
+> 6. [验证 spec 文件](#b6)
+> 7. [通过 pod repo push 推送 spec 文件](#b7)
 
 很多流程是相同的，相同的流程一笔带过。
 
-### <a name="b-安装 CocoaPods">安装 CocoaPods</a>
+### <span id="b1">安装 CocoaPods</span>
 
-[同上。👆](#a-安装 CocoaPods)
+[同上。👆](#a1)
 
-### <a name="b-创建远程私有 spec 仓库">创建远程私有 spec 仓库</a>
+### <span id="b2">创建远程私有 spec 仓库</span>
 
 所谓的远程私有 spec 仓库，其实也就是一个普通远程代码仓库，到一个 git 仓库托管网站创建一个空仓库即可。[GitHub](https://github.com/) 创建私有仓库是需要付费的，所以可以在 [Bitbucket](https://bitbucket.org) 和 [码市](https://coding.net) 创建免费的私有仓库。
 
@@ -241,7 +241,7 @@ $ pod setup
 ![](https://raw.githubusercontent.com/ripperhe/Resource/master/20170330/create_step2.png)
 
 
-### <a name="b-克隆远程私有 spec 仓库到本地">克隆远程私有 spec 仓库到本地</a>
+### <span id="b3">克隆远程私有 spec 仓库到本地</span>
 
 首先，复制远程仓库地址。
 
@@ -255,19 +255,19 @@ $ pod repo add NAME URL
 
 克隆完成之后，你会发现，在 `~/.cocoapods/repos/` 文件夹下，除了 CocoaPods 官方 spec 仓库 `master` 之外，还多了自己的仓库。
 
-### <a name="b-创建 spec 文件">创建 spec 文件</a>
+### <span id="b4">创建 spec 文件</span>
 
-[同上。👆](#a-创建 spec 文件)
+[同上。👆](#a3)
 
-### <a name="b-提交代码并为框架打 tag">提交代码并为框架打 tag</a>
+### <span id="b5">提交代码并为框架打 tag</span>
 
-[同上。👆](#a-提交代码并为框架打 tag)
+[同上。👆](#a4)
 
-### <a name="b-验证 spec 文件">验证 spec 文件</a>
+### <span id="b6">验证 spec 文件</span>
 
-[同上。👆](#a-验证 spec 文件)
+[同上。👆](#a5)
 
-### <a name="b-推送 spec 文件"> 推送 spec 文件</a>
+### <span id="b7"> 推送 spec 文件</span>
 
 这一步同发布到官方库不同，利用以下命令：
 
@@ -304,7 +304,7 @@ end
 
 可能这里会存在一个问题，同一个 spec 仓库不能够有重名的框架，但是多个 spec 仓库之间，是可以有重名的框架的。所以，可能会存在名字相同的问题，一般采取自己特有的前缀的办法来避免这个问题。
 
-## <a name="fastlane">利用 fastlane 实现自动化</a>
+## <span id="fastlane">利用 fastlane 实现自动化</span>
 
 从前面可以看到，发布 pod 的流程虽然不算复杂，但是每次一步步地做这些事情，非常的没有必要，所以这里考虑用自动化来实现。自动化实现，就需要用到 fastlane。
 
