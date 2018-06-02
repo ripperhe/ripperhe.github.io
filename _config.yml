@@ -91,11 +91,11 @@ disqus:
     username:
 # https://imsun.net/posts/gitment-introduction/
 gitment:
-    owner: #ripperhe
-    repo: #blog-comments
+    owner: ripperhe
+    repo: blog-comments
     oauth:
-        client_id: #6dcf63ab4e93d33d33fa
-        client_secret: #aa430158c8d3fc3c2c15c94063854d6513bda0e6
+        client_id: 6dcf63ab4e93d33d33fa
+        client_secret: aa430158c8d3fc3c2c15c94063854d6513bda0e6
 # https://github.com/gitalk/gitalk#install
 gitalk:
     owner: ripperhe
