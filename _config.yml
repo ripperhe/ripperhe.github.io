@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://ripperhe.com
+url: https://ripperhe.com
 date_format: "ordinal"
 title: 何乐而不为
 subtitle: "Design your life."
@@ -33,6 +33,10 @@ navs:
   -
     href: /categories/
     label: 分类
+
+#   -
+#     href: /archives/
+#     label: 归档
 
   -
     href: /wiki/
