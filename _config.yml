@@ -7,8 +7,7 @@ date_format: "ordinal"
 title: 何乐而不为
 subtitle: "Design your life."
 description: "ripper's blog"
-keywords: ripper, 何宗苡
-favicon: /favicon.ico
+keywords: 何乐而不为, 何宗苡, ripper, ripperhe
 timezone: Asia/Beijing
 encoding: "utf-8"
 side_bar_repo_limit: 4
@@ -19,6 +18,7 @@ side_bar_repo_limit: 4
 author: Ripper He
 organization: 有品
 organization_url: http://www.picooc.com
+github_username: ripperhe
 location: Beijing, China
 email: 453942056@qq.com
 
@@ -80,36 +80,42 @@ collections:
 repository: ripperhe/ripperhe.github.io
 
 # ---------------- #
-#      Socials     #
-# ---------------- #
-github_username: ripperhe
-douban_username: ripperhe
-facebook_username: ripperhe
-weibo_username: ripperhe
-zhihu_username: ripperhe
-twitter_username: ripper_he
-
-# ---------------- #
 #      Comments    #
 # ---------------- #
-# support provider: disqus, duoshuo
-comments_provider: disqus
-# !!!重要!!! 请修改下面两个用户名为你自己申请的
-# !!!Important!!! Please modify usernames below to yours
-disqus_username: http-ripperhe-github-io
-duoshuo_username: ripperhe
-# 在使用 disqus 的时候可点击显示多说评论框
-lazy_load_duoshuo: true
+# support provider: disqus, gitment, gitalk
+comments_provider: gitalk
+# !!!重要!!! 请修改下面这些信息为你自己申请的
+# !!!Important!!! Please modify infos below to yours
+# https://disqus.com
+disqus:
+    username:
+# https://imsun.net/posts/gitment-introduction/
+gitment:
+    owner: #ripperhe
+    repo: #blog-comments
+    oauth:
+        client_id: #6dcf63ab4e93d33d33fa
+        client_secret: #aa430158c8d3fc3c2c15c94063854d6513bda0e6
+# https://github.com/gitalk/gitalk#install
+gitalk:
+    owner: ripperhe
+    repo: blog-comments
+    clientID: 6dcf63ab4e93d33d33fa
+    clientSecret: aa430158c8d3fc3c2c15c94063854d6513bda0e6
+# 在使用其它评论组件时可点击显示 Disqus
+lazy_load_disqus : false
+
+# ---------------- #
+#      Search      #
+# ---------------- #
+simple_jekyll_search:
+    # 是否支持全文搜索
+    fulltext: false
+    # 最多显示多少条搜索结果
+    limit: 10
 
 # ---------------- #
 #    Analytics     #
 # ---------------- #
 google:
     analytics_id: UA-87925867-1
-
-# ---------------- #
-#      Datas       #
-# ---------------- #
-skill_software_keywords: [Object-C, Swift]
-skill_mobile_app_keywords: [iOS]
-# skill_windows_keywords: [Win32 SDK, DuiLib, WTL, COM, WinDbg]

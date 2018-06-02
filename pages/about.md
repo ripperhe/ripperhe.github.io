@@ -14,25 +14,17 @@ permalink: /about/
 
 ## Contact Me
 
-* 博客：[{{ site.title }}]({{ site.url }})
-* GitHub：[@ripperhe](https://github.com/ripperhe)
-* Coding：[@ripper](https://coding.net/u/ripper)
-* 简书：[@ripperhe](http://www.jianshu.com/users/b9249fb85d5d/latest_articles)
-* 掘金：[@ripperhe](http://gold.xitu.io/user/5815dfbdbf22ec006892f92f)
-* 微博：[@ripperhe](http://weibo.com/ripperhe)
+{% for website in site.data.social %}
+* {{ website.sitename }}：[@{{ website.name }}]({{ website.url }})
+{% endfor %}
 
 ## Skill Keywords
 
-#### Software Engineer Keywords
+{% for category in site.data.skills %}
+### {{ category.name }}
 <div class="btn-inline">
-    {% for keyword in site.skill_software_keywords %}
-    <button class="btn btn-outline" type="button">{{ keyword }}</button>
-    {% endfor %}
+{% for keyword in category.keywords %}
+<button class="btn btn-outline" type="button">{{ keyword }}</button>
+{% endfor %}
 </div>
-
-#### Mobile Developer Keywords
-<div class="btn-inline">
-    {% for keyword in site.skill_mobile_app_keywords %}
-    <button class="btn btn-outline" type="button">{{ keyword }}</button>
-    {% endfor %}
-</div>
+{% endfor %}

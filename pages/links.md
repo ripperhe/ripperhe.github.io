@@ -10,5 +10,6 @@ permalink: /links/
 
 > 友谊的小船
 
-* [YoRuo:想变得更好](http://betterlxc.com)
-
+{% for link in site.data.links %}
+* [{{ link.name }}]({{ link.url }})
+{% endfor %}
