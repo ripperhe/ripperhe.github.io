@@ -8,21 +8,9 @@ menu: 关于
 permalink: /about/
 ---
 
-> Learning to love and accept everything that happens
+> 爱上你的命运「Amor fati」
 
 我是何宗苡，目前在做 iOS 开发。
-
-## 三件事
-
-* 努力会让「更好」变成可能
-* 坚持不一定成功，放弃就一定失败
-* 爱上你的命运「Amor fati」
-
-## Info
-
-* 毕业院校：西南石油大学 \| 信息与计算科学专业
-* 籍贯：四川 \| 内江
-* 爱好：篮球、游泳
 
 ## Contact Me
 
