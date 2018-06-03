@@ -8,7 +8,7 @@ menu: 链接
 permalink: /links/
 ---
 
-> 友谊的小船
+> 😍 友情链接
 
 {% for link in site.data.links %}
 * [{{ link.name }}]({{ link.url }})
