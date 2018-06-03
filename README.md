@@ -20,8 +20,8 @@
 
 ## 致谢
 
-感谢 Jekyll 主题作者 [@马壮](https://github.com/mzlogin) 
+感谢 Jekyll 主题作者 [@马壮](https://github.com/mzlogin)
 
 ## About me
 
-目前是一个 iOS 开发，我相信只是暂时的，共同进步吧。
+目前是一个 iOS 开发，共同进步吧。
