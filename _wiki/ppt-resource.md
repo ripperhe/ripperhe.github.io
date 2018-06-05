@@ -29,7 +29,7 @@ google网址部分，没有翻墙无法正常查看
 
 | Website | Description | 
 | --- | --- |
-| [![](http://duososo.com/favicon.ico){:height="16" width="16"} http://duososo.com/](http://duososo.com/){:target="_blank"} | 多搜搜多搜搜多搜搜多搜搜多搜搜 |
+| [![](http://duososo.com/favicon.ico){:height="16" width="16"} http://duososo.com/](http://duososo.com/){:target="_blank"} | 多搜搜 |
 | [![](http://bigbigwork.com/favicon.ico){:height="16" width="16"} http://bigbigwork.com/](http://bigbigwork.com/){:target="_blank"} | 大作 |
 
 ## 1/6 关于图片
