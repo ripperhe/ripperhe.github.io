@@ -14,6 +14,9 @@ keywords: PPT, resource, website
 3. 获取favicon.ico
 dnspod：http://statics.dnspod.cn/proxy_favicon/_/favicon?domain=url网址【特别推荐】
 google：http://www.google.com/s2/favicons?domain=域名
+部分网站(3个)两个网址都搞不定，用 https://www.google.com/favicon.ico 占位
+google网址部分，没有翻墙无法正常查看
+
 
 | Website | Description | 
 | --- | --- |
@@ -61,7 +64,7 @@ google：http://www.google.com/s2/favicons?domain=域名
 | --- | --- |
 | [![](https://www.google.com/s2/favicons?domain=www.qiuziti.com){:height="16" width="16"} http://www.qiuziti.com/](http://www.qiuziti.com/){:target="_blank"} | 求字体 |
 | [![](https://www.fontke.com/favicon.ico){:height="16" width="16"} https://www.fontke.com/](https://www.fontke.com/){:target="_blank"} | 字客网 |
-| [![](http://www.shufaziti.com/favicon.ico){:height="16" width="16"} http://www.shufaziti.com/](http://www.shufaziti.com/){:target="_blank"} | 书法字体 |
+| [![](https://www.google.com/favicon.ico){:height="16" width="16"} http://www.shufaziti.com/](http://www.shufaziti.com/){:target="_blank"} | 书法字体 |
 | [![](http://www.qt86.com/favicon.ico){:height="16" width="16"} http://www.qt86.com/](http://www.qt86.com/){:target="_blank"} | 艺术字 |
 | [![](http://www.hellofont.cn/favicon.ico){:height="16" width="16"} http://www.hellofont.cn/](http://www.hellofont.cn/){:target="_blank"} | 字由-设计师必备字体 |
 
@@ -72,7 +75,7 @@ google：http://www.google.com/s2/favicons?domain=域名
 | [![](http://www.peise.net/favicon.ico){:height="16" width="16"} http://www.peise.net/tools/web/](http://www.peise.net/tools/web/){:target="_blank"} | 配色工具 |
 | [![](http://www.colorhunter.com/favicon.ico){:height="16" width="16"} http://www.colorhunter.com/](http://www.colorhunter.com/){:target="_blank"} | Color hunter |
 | [![](http://color.uisdc.com/favicon.ico){:height="16" width="16"} http://color.uisdc.com/](http://color.uisdc.com/){:target="_blank"} | 中国传统色彩 |
-| [![](https://colorfor.today/favicon.ico){:height="16" width="16"} https://colorfor.today/](https://colorfor.today/){:target="_blank"} | Dribbble每日配色精选 |
+| [![](https://www.google.com/favicon.ico){:height="16" width="16"} https://colorfor.today/](https://colorfor.today/){:target="_blank"} | Dribbble每日配色精选 |
 | [![](https://color.adobe.com/favicon.ico){:height="16" width="16"} https://color.adobe.com/](https://color.adobe.com/){:target="_blank"} | Adobe Color CC |
 | [![](https://www.google.com/s2/favicons?domain=uigradients.com){:height="16" width="16"} https://uigradients.com/](https://uigradients.com/){:target="_blank"} | 渐变色 |
 
@@ -91,7 +94,7 @@ google：http://www.google.com/s2/favicons?domain=域名
 | --- | --- |
 | [![](http://www.officeplus.cn/favicon.ico){:height="16" width="16"} http://www.officeplus.cn/](http://www.officeplus.cn/){:target="_blank"} | Office plus |
 | [![](http://www.ypppt.com/favicon.ico){:height="16" width="16"} http://www.ypppt.com/](http://www.ypppt.com/){:target="_blank"} | 优品 PPT |
-| [![](http://www.pptmind.com/favicon.ico){:height="16" width="16"} http://www.pptmind.com/](http://www.pptmind.com/){:target="_blank"} | PPT Mind |
+| [![](https://www.google.com/favicon.ico){:height="16" width="16"} http://www.pptmind.com/](http://www.pptmind.com/){:target="_blank"} | PPT Mind |
 | [![](http://www.pooban.com/favicon.ico){:height="16" width="16"} http://www.pooban.com/](http://www.pooban.com/){:target="_blank"} | 扑奔网 |
 | [![](https://www.google.com/s2/favicons?domain=www.tretars.com){:height="16" width="16"} http://www.tretars.com/](http://www.tretars.com/){:target="_blank"} | 逼格 PPT |
 | [![](http://www.yanj.cn/favicon.ico){:height="16" width="16"} http://www.yanj.cn/](http://www.yanj.cn/){:target="_blank"} | 演界网 |
