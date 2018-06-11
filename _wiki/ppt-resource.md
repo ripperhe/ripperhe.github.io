@@ -18,23 +18,23 @@ google：http://www.google.com/s2/favicons?domain=域名
 google网址部分，没有翻墙无法正常查看
 
 
-| Website | Description | 
+| Website | Description |
 | --- | --- |
 | [![](imgurl favicon.ico){:height="16" width="16"} weburl](weburl){:target="_blank"} | miaosumiaoshumiaoshu |
 -->
 
 
 
-## 0/6 聚合网站
+## 0 聚合网站
 
-| Website | Description | 
+| Website | Description |
 | --- | --- |
 | [![](http://duososo.com/favicon.ico){:height="16" width="16"} http://duososo.com/](http://duososo.com/){:target="_blank"} | 多搜搜 |
 | [![](http://bigbigwork.com/favicon.ico){:height="16" width="16"} http://bigbigwork.com/](http://bigbigwork.com/){:target="_blank"} | 大作 |
 
-## 1/6 关于图片
+## 1 关于图片
 
-| Website | Description | 
+| Website | Description |
 | --- | --- |
 | [![](https://www.pexels.com/favicon.ico){:height="16" width="16"} https://www.pexels.com/](https://www.pexels.com/){:target="_blank"} | Pexels |
 | [![](https://pixabay.com/favicon.ico){:height="16" width="16"} https://pixabay.com/](https://pixabay.com/){:target="_blank"} | Pixabay |
@@ -49,18 +49,18 @@ google网址部分，没有翻墙无法正常查看
 | [![](https://www.google.com/s2/favicons?domain=shotstash.com){:height="16" width="16"} https://shotstash.com/](https://shotstash.com/){:target="_blank"} | 射击藏匿 |
 | [![](https://freerangestock.com/favicon.ico){:height="16" width="16"} https://freerangestock.com/](https://freerangestock.com/){:target="_blank"} | 西班牙免费图 |
 
-## 2/6 关于图标
+## 2 关于图标
 
-| Website | Description | 
+| Website | Description |
 | --- | --- |
 | [![](http://www.iconfont.cn/favicon.ico){:height="16" width="16"} http://www.iconfont.cn/](http://www.iconfont.cn/){:target="_blank"} | 阿里巴巴矢量图标库 |
 | [![](http://www.easyicon.net/favicon.ico){:height="16" width="16"} http://www.easyicon.net/](http://www.easyicon.net/){:target="_blank"} | Easy icon |
 | [![](https://www.flaticon.com/favicon.ico){:height="16" width="16"} https://www.flaticon.com/](https://www.flaticon.com/){:target="_blank"} | Flaticon |
 | [![](https://iconstore.co/favicon.ico){:height="16" width="16"} https://iconstore.co/](https://iconstore.co/){:target="_blank"} | 图标商店 |
 
-## 3/6 关于字体
+## 3 关于字体
 
-| Website | Description | 
+| Website | Description |
 | --- | --- |
 | [![](https://www.google.com/s2/favicons?domain=www.qiuziti.com){:height="16" width="16"} http://www.qiuziti.com/](http://www.qiuziti.com/){:target="_blank"} | 求字体 |
 | [![](https://www.fontke.com/favicon.ico){:height="16" width="16"} https://www.fontke.com/](https://www.fontke.com/){:target="_blank"} | 字客网 |
@@ -68,9 +68,9 @@ google网址部分，没有翻墙无法正常查看
 | [![](http://www.qt86.com/favicon.ico){:height="16" width="16"} http://www.qt86.com/](http://www.qt86.com/){:target="_blank"} | 艺术字 |
 | [![](http://www.hellofont.cn/favicon.ico){:height="16" width="16"} http://www.hellofont.cn/](http://www.hellofont.cn/){:target="_blank"} | 字由-设计师必备字体 |
 
-## 4/6 关于配色
+## 4 关于配色
 
-| Website | Description | 
+| Website | Description |
 | --- | --- |
 | [![](http://www.peise.net/favicon.ico){:height="16" width="16"} http://www.peise.net/tools/web/](http://www.peise.net/tools/web/){:target="_blank"} | 配色工具 |
 | [![](http://www.colorhunter.com/favicon.ico){:height="16" width="16"} http://www.colorhunter.com/](http://www.colorhunter.com/){:target="_blank"} | Color hunter |
@@ -79,18 +79,18 @@ google网址部分，没有翻墙无法正常查看
 | [![](https://color.adobe.com/favicon.ico){:height="16" width="16"} https://color.adobe.com/](https://color.adobe.com/){:target="_blank"} | Adobe Color CC |
 | [![](https://www.google.com/s2/favicons?domain=uigradients.com){:height="16" width="16"} https://uigradients.com/](https://uigradients.com/){:target="_blank"} | 渐变色 |
 
-## 5/6 关于灵感
+## 5 关于灵感
 
-| Website | Description | 
+| Website | Description |
 | --- | --- |
 | [![](http://huaban.com/favicon.ico){:height="16" width="16"} http://huaban.com/](http://huaban.com/){:target="_blank"} | 花瓣 |
 | [![](http://www.zcool.com.cn/favicon.ico){:height="16" width="16"} http://www.zcool.com.cn/](http://www.zcool.com.cn/){:target="_blank"} | 站酷 |
 | [![](https://www.behance.net/favicon.ico){:height="16" width="16"} https://www.behance.net/](https://www.behance.net/){:target="_blank"} | Behance |
 | [![](https://www.google.com/s2/favicons?domain=dribbble.com){:height="16" width="16"} https://dribbble.com/](https://dribbble.com/){:target="_blank"} | Dribbble |
 
-## 6/6 关于模板
+## 6 关于模板
 
-| Website | Description | 
+| Website | Description |
 | --- | --- |
 | [![](http://www.officeplus.cn/favicon.ico){:height="16" width="16"} http://www.officeplus.cn/](http://www.officeplus.cn/){:target="_blank"} | Office plus |
 | [![](http://www.ypppt.com/favicon.ico){:height="16" width="16"} http://www.ypppt.com/](http://www.ypppt.com/){:target="_blank"} | 优品 PPT |
@@ -101,3 +101,14 @@ google网址部分，没有翻墙无法正常查看
 | [![](https://www.presentationload.com/favicon.ico){:height="16" width="16"} https://www.presentationload.com/](https://www.presentationload.com/){:target="_blank"} | Persentationload |
 | [![](http://www.pptstore.net/favicon.ico){:height="16" width="16"} http://www.pptstore.net/](http://www.pptstore.net/){:target="_blank"} | PPT Store |
 
+## 7 视频素材
+| Website | Description |
+| --- | --- |
+| [![](http://www.vjshi.com/favicon.ico){:height="16" width="16"} http://www.vjshi.com/](http://www.vjshi.com/){:target="_blank"} | VJ师 |
+| [![](http://sc.sd235.com/favicon.ico){:height="16" width="16"} http://sc.sd235.com/](http://sc.sd235.com/){:target="_blank"} | 深度素材网 免费 |
+| [![](https://ibaotu.com/favicon.ico){:height="16" width="16"} https://ibaotu.com/](https://ibaotu.com/){:target="_blank"} | 包图网 一天免费一次 |
+| [![](http://699pic.com/favicon.ico){:height="16" width="16"} http://699pic.com/](http://699pic.com/){:target="_blank"} | 摄图网 |
+| [![](https://www.cgown.com/favicon.ico){:height="16" width="16"} https://www.cgown.com/](https://www.cgown.com/){:target="_blank"} | CG资源网 |
+| [![](http://www.newcger.com/favicon.ico){:height="16" width="16"} http://www.newcger.com/](http://www.newcger.com/){:target="_blank"} | New CGer |
+| [![](http://originoo.com/favicon.ico){:height="16" width="16"} http://originoo.com](http://originoo.com){:target="_blank"} | 锐景创意 高品质 |
+| [![](https://www.hellorf.com/favicon.ico){:height="16" width="16"} https://www.hellorf.com/video](https://www.hellorf.com/video){:target="_blank"} | 站酷海洛 高品质 贵 |
