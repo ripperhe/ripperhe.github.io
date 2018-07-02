@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Windos下使用BaiduExporter+Aria2下载百度网盘文件
+title:  Windos 下使用 BaiduExporter + Aria2 下载百度网盘文件
 categories: Windows
 description: 使用 Aria2 下载文件
 keywords: Windows, Aria2, BaiduExporter
