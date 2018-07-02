@@ -17,7 +17,7 @@ keywords: Windows, Aria2, BaiduExporter
 
 文章文件分享地址：
 
-* [https://pan.baidu.com/s/17Dme1SMNYJ3HQfftghO_bg]()
+* [https://pan.baidu.com/s/17Dme1SMNYJ3HQfftghO_bg](https://pan.baidu.com/s/17Dme1SMNYJ3HQfftghO_bg)
 
 ## 安装 BaiduExporter
 
