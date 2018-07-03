@@ -12,8 +12,8 @@ keywords: Windows, Aria2, BaiduExporter
 百度盘下载限速，Aria2 堪称神器，大大加大下载速度，最近研究了一下如何在 Windows 下使用 Aria2，需要以下三个工具配合使用：
 
 * [BaiduExporter](https://github.com/acgotaku/BaiduExporter)：百度云盘导出下载的 `Chrome` 插件
-* [Aria2](https://aria2.github.io/)：下载工具
-* [Aria2 Web Frontend](http://binux.github.io/yaaw/demo/#)：显示下载进度的 `Web UI`
+* [Aria2](https://github.com/aria2/aria2)：下载工具
+* [Yaaw](https://github.com/binux/yaaw)：在线显示 Aria2 下载进度的 [Web UI](http://binux.github.io/yaaw/demo/#)
 
 文章文件分享地址：
 
@@ -102,7 +102,7 @@ CreateObject("WScript.Shell").Run "C:\PROGRA~1\aria2\aria2c --conf-path=C:\PROGR
 
 ## 配置 Aria2 Web Frontend
 
-[Aria2 Web Frontend](http://binux.github.io/yaaw/demo/#) 就是一个显示 Aria2 下载进度的在线网站，需要将 `JSON-RPC Path` 修改为 `http://localhost:6800/jsonrpc` 即可显示，将 `Auto Refresh` 修改为 `1s` 看起来更方便一些
+进入网址 [Aria2 Web Frontend](http://binux.github.io/yaaw/demo/#)，需要将 `JSON-RPC Path` 修改为 `http://localhost:6800/jsonrpc` 即可显示，将 `Auto Refresh` 修改为 `1s` 看起来更方便一些
 
 ![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/snip_20180702141826.png)
 
