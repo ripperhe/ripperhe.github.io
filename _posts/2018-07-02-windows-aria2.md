@@ -25,7 +25,7 @@ keywords: Windows, Aria2, BaiduExporter
 
 1. 进入网址下载 [https://github.com/acgotaku/BaiduExporter](https://github.com/acgotaku/BaiduExporter)
 	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/snip_20180701212558.png)
-2. 解压文件夹，将 `BaiduExporter.crx` 文件拖入 Chrome 扩展程序页面（在浏览器输入 `chrome://extensions` 进入扩展程序页面），进行安装
+2. 解压文件夹，在浏览器输入 `chrome://extensions` 进入扩展程序页面，选中页面右上角的 `开发者模式`，然后将`BaiduExporter.crx` 文件拖入 Chrome 扩展程序页面，进行安装
 	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/snip_20180701100117.png)
 
 ### 加入白名单
