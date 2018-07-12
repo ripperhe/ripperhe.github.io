@@ -3,6 +3,7 @@
       - Object-C
       - Swift
 
-- name: Mobile Developer Keywords
+- name: Client Developer Keywords
   keywords:
       - iOS
+      - macOS
