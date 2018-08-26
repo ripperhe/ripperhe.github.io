@@ -1,6 +1,5 @@
 # ripperhe.github.io
 
-
 这很显然是利用 [GitHub Pages](https://pages.github.com/) 联合 [Jekyll](http://jekyll.com.cn/) 搭建的一个静态博客。
 
 很高兴，有自己的博客了。[欢迎来访~](http://ripperhe.com) 🎉
