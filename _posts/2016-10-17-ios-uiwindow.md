@@ -35,26 +35,41 @@ UIWindow继承自UIView，我们一般不会直接去设置其UI展现，但它�
 @property(nonatomic,readonly) NSArray<__kindof UIWindow *>  *windows;
 ```
 
-**keyWindow** 应用程序的关键window。用来接收键盘以及非触摸类的消息事件的UIWindow，而且程序中每个时刻只能有一个UIWindow是keyWindow。					
-**windows** 应用程序中所有的window对象，包括正在显示的或隐藏的window。
+
+**keyWindow** 应用程序的关键 window，官方描述如下
+
+> This property holds the UIWindow object in the windows array that is most recently sent the makeKeyAndVisible message.
+
+用来接收键盘以及非触摸类的消息事件的 UIWindow，而且程序中每个时刻只能有一个 UIWindow 是 keyWindow。同时也是最后一个调用 `makeKeyAndVisible` 方法的 UIWindow。
+
+**windows** 应用程序中所有的非系统创建的 window 对象，官方描述如下
+
+> This property contains the UIWindow objects currently associated with the app. This list does not include windows created and managed by the system, such as the window used to display the status bar.
+>
+>The windows in the array are ordered from back to front by window level; thus, the last window in the array is on top of all other app windows.
+
+例如 sutatus bar 不会包含在其中。会包含所有用户创建的 Window，也就是说包括正在显示的或隐藏的 window，同时这个数组的裴谞是根据 window level 进行排序的，从后往前进行排序，排在最后的证明 window 层级最高。
 
 新建一个iOS工程,在没有触发键盘时，在控制台打印`winodws`如下：
 
->(lldb) po [[UIApplication sharedApplication] windows]    
-\<__NSArrayM 0x61800024d7d0>(    
-\<**UIWindow**: 0x7fd8e1a06370; frame = (0 0; 414 736); autoresize = W+H; gestureRecognizers = \<NSArray: 0x61800024d170>; layer = \<UIWindowLayer: 0x61000003e7c0>>    
+```objc
+(lldb) po [[UIApplication sharedApplication] windows]    
+<__NSArrayM 0x61800024d7d0>(    
+<**UIWindow**: 0x7fd8e1a06370; frame = (0 0; 414 736); autoresize = W+H; gestureRecognizers = <NSArray: 0x61800024d170>; layer = <UIWindowLayer: 0x61000003e7c0>>    
 )
-
+```
 该window就是 app delegate 的window，即系统自动生成的那个window。当文本编辑，触发键盘之后，打印`windows`如下：
 
->(lldb) po [[UIApplication sharedApplication] windows]    
-\<__NSArrayM 0x61000005d1f0>(   
-\<**UIWindow**: 0x7fd8e1a06370; frame = (0 0; 414 736); autoresize = W+H; gestureRecognizers = \<NSArray: 0x61800024d170>; layer = \<UIWindowLayer: 0x61000003e7c0>>,     
-\<**UITextEffectsWindow**: 0x7fd8dfc1cde0; frame = (0 0; 414 736); opaque = NO; autoresize = W+H; layer = \<UIWindowLayer: 0x60800022dd60>>,        
-\<**UIRemoteKeyboardWindow**: 0x7fd8dfc27e40; frame = (0 0; 414 736); opaque = NO; autoresize = W+H; layer = \<UIWindowLayer: 0x608000231300>>   
+```objc
+(lldb) po [[UIApplication sharedApplication] windows]    
+<__NSArrayM 0x61000005d1f0>(   
+<**UIWindow**: 0x7fd8e1a06370; frame = (0 0; 414 736); autoresize = W+H; gestureRecognizers = <NSArray: 0x61800024d170>; layer = <UIWindowLayer: 0x61000003e7c0>>,     
+<**UITextEffectsWindow**: 0x7fd8dfc1cde0; frame = (0 0; 414 736); opaque = NO; autoresize = W+H; layer = <UIWindowLayer: 0x60800022dd60>>,        
+<**UIRemoteKeyboardWindow**: 0x7fd8dfc27e40; frame = (0 0; 414 736); opaque = NO; autoresize = W+H; layer = <UIWindowLayer: 0x608000231300>>   
 )
+```
 
-打印中的`UIRemoteKeyboardWindow`就是键盘的window，与此同时，还出现了`UITextEffectsWindow`，这个window我没有找到官方的说明，不过可以推测它也是和文本输入有关系的。
+打印中的 `UIRemoteKeyboardWindow` 就是键盘的window，与此同时，还出现了`UITextEffectsWindow`，这个window我没有找到官方的说明，不过可以推测它也是和文本输入有关系的。
 
 ## UIWindow 的属性与方法
 
@@ -226,3 +241,4 @@ self.testWindow = nil;
 ✨具体细节可到GitHub下载demo查看。[GitHub地址 😁](https://github.com/ripperhe/ZYSuspensionView)
 
 ✨如果有用，还望朋友能给个star，谢谢。
+
