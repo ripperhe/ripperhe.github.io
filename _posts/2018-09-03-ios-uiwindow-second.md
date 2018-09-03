@@ -48,8 +48,10 @@ self.window = nil;
 * 一定是 windows 数组中，用户创建的 level 最大的，但是 level 最大的可能有几个，因为 level 可以相同
 * level 相同的时候，一定是实际显示在最上面的那个
 
-总结一下就是，如果当前的 keyWindow  设置 `hidden = YES`，系统会去找 windows 数组中 **实际显示在最上层的那个 window**
+总结一下就是，如果当前的 keyWindow  设置 `hidden = YES`，系统会去找 windows 数组中 **实际显示在最上层的那个 window** 
 （当前的 keyWindow 可能就是实际显示在最上层的那个，系统会将其跳过）
+
+需要注意的是，实际显示在最上面的不一定是 windows 最后一个元素，后面会讲~
 
 ## UIApplication ★ windows
 
@@ -100,7 +102,7 @@ level 相同的，后初始化的排在后面（也许是通过比较内存地�
 
 但是调用 `makeyAndVisible` 方法是可以改变同等级的 window 的上下关系的，所以最上面的 window 不一定就是 windows 数组中最后一个 window
 
-**说极端一点的话，甚至可能出现，一个 window 既在 windows 数组的最后一个，并且是 keyWindow，但是它实际的显示并不是在最上面的情况**
+说极端一点的话，甚至可能出现这样的情况，**一个 window 既在 windows 数组的最后一个，并且是 keyWindow，但是它实际上并不是显示在最上面的那一个 window**
 
 ### <span id="a">如何取到真正的显示在最上面的 window？</span>
 
