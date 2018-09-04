@@ -222,3 +222,4 @@ self.window.hidden = NO;
 * <https://developer.apple.com/documentation/uikit/uiwindow?language=objc#>
 * <https://developer.apple.com/documentation/uikit/uiwindow/1621601-makekeyandvisible?language=objc>
 * <https://bugtags.kf5.com/hc/kb/article/77692/>
+* <https://jkyin.me/uiwindow/>
