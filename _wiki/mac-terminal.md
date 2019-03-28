@@ -30,7 +30,18 @@ keywords: Mac, command, terminal
 | ctrl + c | 终止当前命令 |
 
 
-* 备注：其中`option + 左/右`在mac原生终端中可以使用，iTerm中不行
+备注：其中`option + 左/右`在 Mac 原生终端中可以直接使用，iTerm2 中需要手动设置，按以下步骤设置
+
+* iTerm2 
+	* Preferences 
+		* Profiles
+			* Keys
+				* `⌥ ←` 选中后修改为
+					* Action: `Send Escape Sequence`
+					* Esc+: `b`
+				* `⌥ →` 选中后修改为
+					* Action: `Send Escape Sequence`
+					* Esc+: `f`
 
 ## 常用命令
 
