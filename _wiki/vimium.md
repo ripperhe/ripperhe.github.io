@@ -96,4 +96,7 @@ keywords: Chrome, Vimium
 | v        |  enter visual mode; use p/P to paste-and-go, use y to yank |
 | V        |  enter visual line mode |
 
+## 参考
 
+* <https://github.com/philc/vimium>
+* <https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb>
