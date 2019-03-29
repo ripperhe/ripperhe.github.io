@@ -45,31 +45,37 @@ keywords: Mac, command, terminal
 
 ## 常用命令
 
-### 查询命令
+### man
 
-```
+查询命令
+
+```bash
 $ man 命令名
 ```
 * 输入命令名字，可查询其具体使用方法
 * 举例
 
-```
+```bash
 $ man -t cal | open -a Preview -f
 # 查询cal命令，并用Preview打开
 ```
 
-###  显示文件列表
+###  ls
 
-```
+显示文件列表
+
+```bash
 $ ls 参数 文件目录
 ```
 
 * 参数：`-a` 显示所有文件		
 * 文件夹：不输入则表示当前文件夹
 
-### 切换文件目录
+### cd
 
-```
+切换文件目录
+
+```bash
 $ cd 文件目录
 ```
 
@@ -79,27 +85,35 @@ $ cd 文件目录
 	* `~` 到用户目录 
 	* `..` 到上一个目录
 
-### 显示当前目录
+### pwd
 
-```
+显示当前目录
+
+```bash
 $ pwd
 ```
 
-### 新建文件夹
+### mkdir
 
-```
+新建文件夹
+
+```bash
 $ mkdir 目录名
 ```
 
-### 新建文件
+### touch
 
-```
+新建文件
+
+```bash
 $ touch 文件名
 ```
 
-### 拷贝
+### cp
 
-```
+拷贝
+
+```bash
 $ cp 参数 源文件 目标文件
 ```
 
@@ -107,100 +121,50 @@ $ cp 参数 源文件 目标文件
 * 源文件：如果是当前文件夹的文件，直接写文件名，否则要带上整个文件路径
 * 目标文件：如果写的是一个文件夹路径，则会将文件拷贝到那个文件路径；如果最后加了文件名，将会重命名源文件
 
-### 删除
+### rm
 
-```
+删除
+
+```bash
 $ rm 参数 文件
 ```
 
 * 参数：`-rf` 强制删除
 
-### 移动
+###  mv
 
-```
+移动
+
+```bash
 $ mv 源文件 目标文件
 ```
 
-### 查找
+### find
 
-```
+查找
+
+```bash
 $ find 文件目录 -name "匹配符"
 ```
 
-* 举例
+举例
 
-```
-$ find . -name "*ripper*"
+```bash
 # 找出当前目录及其子目录中所有名字包含"ripper"的文件
-
-$ find . -name "*.md"
+$ find . -name "*ripper*"
+	
 # 找出当前目录及其子目录中所有名字后缀为".md"的文件
+$ find . -name "*.md"
 ```
-
-
-
-
-
-<!--
-```
-chmod 参数 权限 文件
-
-chown 参数 用户：组 文件
-
-nano 文件名
-Ctrl + O   Ctrl + X
-
-sh 脚本文件名
-
-cat 文件名
-
-pg 文件名
-
-more 文件名
-
-ln -s 文件1 文件2
-
-find . -name "*.c" -print
-
-file 文件名
-
-head -20 文件名
-
-tail -15 文件名
-
-diff 文件1 文件2
-
-passwd
-
-make 
-
-
-kill
-
-date
-
-cal
-
-telnet
-
-echo
-
-printf
-
-```
--->
 
 ## Other
 
-### 开启显示隐藏文件
+### 开启/关闭 显示隐藏文件
 
-```
+```bash
+# 开启
 $ defaults write com.apple.finder AppleShowAllFiles -bool true
-```
-
-### 关闭显示隐藏文件
-
-```
+# 关闭
 $ defaults write com.apple.finder AppleShowAllFiles -bool false
 ```
 
