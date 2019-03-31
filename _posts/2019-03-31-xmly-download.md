@@ -68,7 +68,7 @@ OK，现在文件下载好了，打开 Chrome 浏览器，进入 <https://www.xi
 max_thread_num=4
 download_try_times=5
 [settings]
-cookie=将你获取到的1&_token的内容替换到这里
+cookies=将你获取到的1&_token的内容替换到这里
 history=https://www.ximalaya.com/renwen/15801963/
 ```
 
@@ -79,7 +79,7 @@ history=https://www.ximalaya.com/renwen/15801963/
 max_thread_num=4
 download_try_times=5
 [settings]
-cookie=1&_token=XXXXXXXX&XXXXXXXXXXXXXXXXXXXXXXX
+cookies=1&_token=XXXXXXXX&XXXXXXXXXXXXXXXXXXXXXXX
 history=https://www.ximalaya.com/renwen/15801963/
 ```
 
