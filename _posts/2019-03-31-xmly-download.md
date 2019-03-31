@@ -47,15 +47,17 @@ OK，现在文件下载好了，打开 Chrome 浏览器，进入 <https://www.xi
 
 ![](https://raw.githubusercontent.com/ripperhe/Resource/master/20190331/Jietu20190331-125709.png)
 
-重新进入网站之后，应该会获取到一个网络请求，点击该请求
+重新进入网站之后，应该会获取到一个网络请求。如下所示
 
 ![](https://raw.githubusercontent.com/ripperhe/Resource/master/20190331/Jietu20190331-125823.png)
 
-选中之后，查看该请求的详细信息，选中 `Headers` - `Request Headers` - `Cookie`，这个 Cookie 里面的内容就是我们需要的东西
+**如果没有看到任何一个请求，就随便选一个专辑，点进去，然后播放任意一个音频，应该就会有请求出现在列表中了。**
+
+选中一个请求之后，查看该请求的详细信息，选中 `Headers` - `Request Headers` - `Cookie`，这个 Cookie 里面的内容就是我们需要的东西
 
 ![](https://raw.githubusercontent.com/ripperhe/Resource/master/20190331/Jietu20190331-130042.png)
 
-将 Cookie 中 `1&_token=` 开始的这部分拷贝出来，到最近的一个分号 `;` 为止，这就是我们要的 token 了。
+将 Cookie 中 `1&_token=` 开始的这部分拷贝出来，到最近的一个分号 `;` 为止，这就是我们要的 token 了。注意，从 `1` 开始复制，到 `;` 结束，不需要最后这个分号。
 
 ## 开始下载
 
@@ -66,11 +68,11 @@ OK，现在文件下载好了，打开 Chrome 浏览器，进入 <https://www.xi
 max_thread_num=4
 download_try_times=5
 [settings]
-cookie=👉将你获取到的1&_token的内容替换到这里👈🏻
+cookie=将你获取到的1&_token的内容替换到这里
 history=https://www.ximalaya.com/renwen/15801963/
 ```
 
-将 token 替换到文件中 `cookie=` 后面，不要留空格，形如这样
+直接将 token 替换到文件中 `cookie=` 后面，**不要留空格**，**不要有任何其他多余操作**，形如这样
 
 ```
 [Settings]
