@@ -99,3 +99,6 @@ keywords: chrome, vimium
 
 	5t      数字num + t，打开num个tab页面
 	<Esc>   ESC按钮，可以从任意控制命令中退出，也可以从任意模式中退出（例如插入模式、查找模式）
+	
+> * 本文永久更新链接：<https://ripperhe.com/2016/09/12/chrome-vimium>
+> * 作者：[ripperhe](https://github.com/ripperhe)

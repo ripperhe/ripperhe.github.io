@@ -55,3 +55,6 @@ keywords: 经济
 	* 通货膨胀（印刷钱来还款）经济影响差，但在政治上有好处。
 * 一国的经济不会因为人们的消费而增长，而是经济增长带动人们的消费。
 * 通货膨胀不过是把财富从以某种货币储蓄的人手中转移到以同种货币负债的人那里。
+
+> * 本文永久更新链接：<https://ripperhe.com/2016/10/30/how-an-economy-grows-and-why-it-crashes>
+> * 作者：[ripperhe](https://github.com/ripperhe)

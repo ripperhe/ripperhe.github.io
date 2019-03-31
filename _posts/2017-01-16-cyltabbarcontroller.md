@@ -282,4 +282,5 @@ CYLTabBarController *tabBarController = [CYLTabBarController tabBarControllerWit
 
 第一次去读别人的源码，说实话，真的不知道怎样子写。可能我的文章写的很乱，不过自己读一遍再用伪代码写一遍整体思路，感觉还是学到了不少东西，自己受益了。
 
-
+> * 本文永久更新链接：<https://ripperhe.com/2017/01/16/cyltabbarcontroller>
+> * 作者：[ripperhe](https://github.com/ripperhe)

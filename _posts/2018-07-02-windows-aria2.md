@@ -124,3 +124,6 @@ CreateObject("WScript.Shell").Run "C:\PROGRA~1\aria2\aria2c --conf-path=C:\PROGR
 * [https://blog.icehoney.me/posts/2015-01-31-Aria2-download](https://blog.icehoney.me/posts/2015-01-31-Aria2-download)
 * [https://steemit.com/chrome/@free1x/chrome](https://steemit.com/chrome/@free1x/chrome)
 * [http://saili.science/2017/03/31/bdy/](http://saili.science/2017/03/31/bdy/)
+
+> * 本文永久更新链接：<https://ripperhe.com/2018/07/02/windows-aria2>
+> * 作者：[ripperhe](https://github.com/ripperhe)

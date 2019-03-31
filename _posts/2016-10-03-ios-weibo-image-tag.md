@@ -70,3 +70,6 @@ keywords: iOS, weibo, imageView
 ✨具体细节可到GitHub下载demo查看。[GitHub地址 😁](https://github.com/ripperhe/ZYTagView.git)
 
 ✨如果有用，还望朋友能给个star，谢谢。
+
+> * 本文永久更新链接：<https://ripperhe.com/2016/10/03/ios-weibo-image-tag>
+> * 作者：[ripperhe](https://github.com/ripperhe)

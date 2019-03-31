@@ -223,3 +223,6 @@ self.window.hidden = NO;
 * <https://developer.apple.com/documentation/uikit/uiwindow/1621601-makekeyandvisible?language=objc>
 * <https://bugtags.kf5.com/hc/kb/article/77692/>
 * <https://jkyin.me/uiwindow/>
+
+> * 本文永久更新链接：<https://ripperhe.com/2018/09/03/ios-uiwindow-second>
+> * 作者：[ripperhe](https://github.com/ripperhe)

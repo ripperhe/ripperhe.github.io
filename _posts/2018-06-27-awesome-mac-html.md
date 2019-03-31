@@ -30,4 +30,7 @@ keywords: Mac
 
 `源仓库链接 👉` [https://github.com/jaywcjlove/awesome-mac](https://github.com/jaywcjlove/awesome-mac) 
 
-> 如有帮助到你，那就 [`Star`](https://github.com/ripperhe/awesome-mac-html) 一下吧~ 🎉
+如有帮助到你，那就 [`Star`](https://github.com/ripperhe/awesome-mac-html) 一下吧~ 🎉
+
+> * 本文永久更新链接：<https://ripperhe.com/2018/06/27/awesome-mac-html>
+> * 作者：[ripperhe](https://github.com/ripperhe)

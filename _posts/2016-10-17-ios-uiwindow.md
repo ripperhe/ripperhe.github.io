@@ -242,3 +242,5 @@ self.testWindow = nil;
 
 ✨如果有用，还望朋友能给个star，谢谢。
 
+> * 本文永久更新链接：<https://ripperhe.com/2016/10/17/ios-uiwindow>
+> * 作者：[ripperhe](https://github.com/ripperhe)

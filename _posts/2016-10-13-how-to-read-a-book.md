@@ -133,3 +133,6 @@ B.批评观点的特别标准
 5. 在空白处记下其他的页码
 6. 将关键字或句子圈出来
 7. 在书页的空白处做笔记
+
+> * 本文永久更新链接：<https://ripperhe.com/2016/10/13/how-to-read-a-book>
+> * 作者：[ripperhe](https://github.com/ripperhe)

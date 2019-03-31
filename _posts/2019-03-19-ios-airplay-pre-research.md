@@ -85,3 +85,6 @@ AirPlay 使用的时候有几种使用模式，在 iPhone 上目前主要分为�
 * <https://support.apple.com/zh-cn/HT204289>
 * <https://www.airserver.com/>
 * <http://www.hpplay.com.cn/>
+
+> * 本文永久更新链接：<https://ripperhe.com/2019/03/19/ios-airplay-pre-research>
+> * 作者：[ripperhe](https://github.com/ripperhe)
