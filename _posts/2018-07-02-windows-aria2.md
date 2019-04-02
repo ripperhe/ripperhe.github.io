@@ -6,10 +6,7 @@ description: 使用 Aria2 下载文件
 keywords: Windows, Aria2, BaiduExporter
 ---
 
-
-## 简介
-
-百度盘下载限速，Aria2 堪称神器，大大加大下载速度，最近研究了一下如何在 Windows 下使用 Aria2，需要以下三个工具配合使用：
+百度盘下载限速，Aria2 可以明显加大下载速度，最近研究了一下如何在 Windows 下使用 Aria2，需要以下三个工具配合使用：
 
 * [BaiduExporter](https://github.com/acgotaku/BaiduExporter)：百度云盘导出下载的 `Chrome` 插件
 * [Aria2](https://github.com/aria2/aria2)：下载工具

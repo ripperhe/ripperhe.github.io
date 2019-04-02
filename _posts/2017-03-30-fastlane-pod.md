@@ -6,8 +6,6 @@ description: 快速发布 Pod 框架
 keywords: iOS, fastlane, CocoaPods
 ---
 
-## 前言
-
 目前比较流行的组件化开发，针对多个 app 要用同一套代码，将其做成 pod 仓库是比较好的解决方案。代码只有一份放在组件仓库，需要集成的 app 只需要将其 pod 到工程内部即可。
 
 如果很多组件都需要做成 pod 库，每一步都手动去做，显得繁琐而且容易出错。本文主要讲一下，怎么自动化去实现这些事情。不过，在此之前，先概述一下，发布框架具体需要做哪些事情。如果对发 pod 的流程比较熟悉，直接跳过看 [自动化实现](#fastlane) 部分。
@@ -19,7 +17,7 @@ keywords: iOS, fastlane, CocoaPods
 
 ## 发布框架到官方库
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20170330/public_pod.png)
+![image](https://raw.githubusercontent.com/ripperhe/Resource/master/20170330/public_pod.png)
 
 > 注：图中标号并非和发布流程标号对应，图中表述的是从框架发布到使用的**大致**流程。
 
@@ -202,7 +200,7 @@ $ pod setup
 
 ## 发布框架到私有库
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20170330/private_pod.png)
+![image](https://raw.githubusercontent.com/ripperhe/Resource/master/20170330/private_pod.png)
 
 > 注：图中标号并非和发布流程标号对应，图中表述的是从框架发布到使用的**大致**流程。
 
@@ -234,18 +232,18 @@ $ pod setup
 
 这里以码市为例。创建账号并点击创建仓库
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20170330/create_step1.png)
+![image](https://raw.githubusercontent.com/ripperhe/Resource/master/20170330/create_step1.png)
 
 选中私有属性，点击创建即可
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20170330/create_step2.png)
+![image](https://raw.githubusercontent.com/ripperhe/Resource/master/20170330/create_step2.png)
 
 
 ### <span id="b3">克隆远程私有 spec 仓库到本地</span>
 
 首先，复制远程仓库地址。
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20170330/create_step3.png)
+![image](https://raw.githubusercontent.com/ripperhe/Resource/master/20170330/create_step3.png)
 
 利用以下命令，克隆远程仓库，并为自己的私有仓库命名
 
@@ -475,7 +473,7 @@ $ fastlane release_pod project:'框架名' version:'版本'
 $ fastlane release_pod repo:ZYSpec project:'框架名' version:'版本'
 ```
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20170330/success_release.png)
+![image](https://raw.githubusercontent.com/ripperhe/Resource/master/20170330/success_release.png)
 
 以后我们升级框架，假如没有依赖新的三方库之类的，我们同样直接执行一行命令即可。麻烦一点的情况，也不过就是手动修改一下 spec 文件，然后再执行命令即可。
 
@@ -625,7 +623,7 @@ $ pre
 [21:06:38]: Please input the lib name:👇
 ```
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20170330/pre.png)
+![image](https://raw.githubusercontent.com/ripperhe/Resource/master/20170330/pre.png)
 
 现在终于不会忘记了...（当然，要是移动了模板文件的路径又得改... 😂 ）如果你也想使用这个脚本，可以 fork [这个仓库](https://github.com/ripperhe/pod-template) 到你的 GitHub 账号下，修改模板文件即可。以下为该仓库的文件：
 
