@@ -57,11 +57,15 @@ OK，现在文件下载好了，打开 Chrome 浏览器，进入 <https://www.xi
 
 ![](https://raw.githubusercontent.com/ripperhe/Resource/master/20190331/Jietu20190331-130042.png)
 
-将 Cookie 中 `1&_token=` 开始的这部分拷贝出来，到最近的一个分号 `;` 为止，这就是我们要的 token 了。注意，从 `1` 开始复制，到 `;` 结束，不需要最后这个分号。
+将 Cookie 中 `1&_token=` 开始的这部分拷贝出来，到最近的一个分号 `;` 为止，这就是我们要的 token 了。**注意，从 `1` 开始复制，到 `;` 结束，不需要最后这个分号。**形如这样:
+
+```
+1&_token=24789987&IJFD87WY757C4NdV9FB4226EJD343EBE3A8D9B21B8ECA1908EF06FBF690BE15A02D806032C02CE58
+```
 
 ## 开始下载
 
-现在打开喜马拉雅下载器文件夹，打开 `config.ini` 文件，如下所示
+现在打开刚才喜马拉雅下载器文件夹，打开 `config.ini` 文件，如下所示
 
 ```
 [Settings]
@@ -72,14 +76,20 @@ cookies=将你获取到的1&_token的内容替换到这里
 history=https://www.ximalaya.com/renwen/15801963/
 ```
 
-直接将 token 替换到文件中 `cookie=` 后面，**不要留空格**，**不要有任何其他多余操作**，形如这样
+⚠️ 顺便提醒一下，下载不了常常是因为 `config.ini` 文件没写对，所以：
+
+* **请务必使用从我分享的链接下载的 `config.ini` 文件**
+* **请务必使用从我分享的链接下载的 `config.ini` 文件**
+* **请务必使用从我分享的链接下载的 `config.ini` 文件**
+
+现在直接将 token 替换到文件中 `cookie=` 后面，**不要留空格**，**不要有任何其他多余操作**，形如这样：
 
 ```
 [Settings]
 max_thread_num=4
 download_try_times=5
 [settings]
-cookies=1&_token=XXXXXXXX&XXXXXXXXXXXXXXXXXXXXXXX
+cookies=1&_token=24789987&IJFD87WY757C4NdV9FB4226EJD343EBE3A8D9B21B8ECA1908EF06FBF690BE15A02D806032C02CE58
 history=https://www.ximalaya.com/renwen/15801963/
 ```
 
