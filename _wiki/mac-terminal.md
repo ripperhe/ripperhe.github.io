@@ -56,8 +56,8 @@ $ man 命令名
 * 举例
 
 ```bash
-$ man -t cal | open -a Preview -f
 # 查询cal命令，并用Preview打开
+$ man -t cal | open -a Preview -f
 ```
 
 ###  ls
