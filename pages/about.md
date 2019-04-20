@@ -1,8 +1,8 @@
 ---
 layout: page
 title: About
-description: 打码改变世界
-keywords: Zhuang Ma, 马壮
+description: 爱上你的命运
+keywords: Ripper, ripperhe
 comments: true
 menu: 关于
 permalink: /about/
@@ -10,7 +10,7 @@ permalink: /about/
 
 > 爱上你的命运「Amor fati」
 
-我是何宗苡，目前在做 iOS 开发。
+emmm，我是一个 iOS 开发，然后...
 
 ## Contact Me
 
