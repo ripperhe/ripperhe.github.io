@@ -62,7 +62,7 @@ keywords: Windows, Aria2, BaiduExporter
 	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/snip_20180702105317.png)
 2. 将压缩包解压，将解压出来的文件放到 `C:\Program Files\aria2` 文件夹下面
 	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/snip_20180702142705.png)
-	
+
 ### 配置
 
 配置文件是直接利用 `BaiduExporter` 开发者推荐的一个配置
@@ -122,5 +122,5 @@ CreateObject("WScript.Shell").Run "C:\PROGRA~1\aria2\aria2c --conf-path=C:\PROGR
 * [https://steemit.com/chrome/@free1x/chrome](https://steemit.com/chrome/@free1x/chrome)
 * [http://saili.science/2017/03/31/bdy/](http://saili.science/2017/03/31/bdy/)
 
-> * 本文永久更新链接：<https://ripperhe.com/2018/07/02/windows-aria2>
-> * 作者：[ripperhe](https://github.com/ripperhe)
+> * 本文作者：[Ripper](https://github.com/ripperhe)
+> * 永久链接：<https://ripperhe.com/2018/07/02/windows-aria2>

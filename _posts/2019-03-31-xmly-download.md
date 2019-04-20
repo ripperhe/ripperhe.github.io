@@ -119,5 +119,5 @@ history=https://www.ximalaya.com/renwen/15801963/
 
 ![](https://raw.githubusercontent.com/ripperhe/Resource/master/20190331/IMG_0524.JPG)
 
-> * 本文永久更新链接：<https://ripperhe.com/2019/03/31/xmly-download>
-> * 作者：[ripperhe](https://github.com/ripperhe)
+> * 本文作者：[Ripper](https://github.com/ripperhe)
+> * 永久链接：<https://ripperhe.com/2019/03/31/xmly-download>

@@ -6,7 +6,7 @@ description: 图片添加标签
 keywords: iOS, weibo, imageView
 ---
 
-公司的项目需要这个功能，写了之后顺便提取出来写了一个demo，简单实现图片添加标签，暂时没有去处理图片宽度小于标签长度的情况。			
+公司的项目需要这个功能，写了之后顺便提取出来写了一个demo，简单实现图片添加标签，暂时没有去处理图片宽度小于标签长度的情况。
 
 ![](http://upload-images.jianshu.io/upload_images/939125-2244ffe4154ccd62.gif?imageMogr2/auto-orient/strip)
 
@@ -71,5 +71,5 @@ keywords: iOS, weibo, imageView
 
 ✨如果有用，还望朋友能给个star，谢谢。
 
-> * 本文永久更新链接：<https://ripperhe.com/2016/10/03/ios-weibo-image-tag>
-> * 作者：[ripperhe](https://github.com/ripperhe)
+> * 本文作者：[Ripper](https://github.com/ripperhe)
+> * 永久链接：<https://ripperhe.com/2016/10/03/ios-weibo-image-tag>

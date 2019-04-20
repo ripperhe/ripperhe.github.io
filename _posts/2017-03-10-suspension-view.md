@@ -28,18 +28,18 @@ keywords: iOS, ZYSuspensionView
 
 	我们公司做体脂秤，所以开发的时候经常需要这么做，不然就得光着脚在秤上称，还不一定是自己想要的数值
 2. 清除 NSUserDefaults，让包里的标记干净得像初恋一样
-3. 显示 log 
+3. 显示 log
 
 	有时候测试人员测试的时候，发现页面的 bug，可能我们在有些 case 预留了一些 log，但是想要导出就麻烦一些，通过点悬浮球列表的某个 cell 跳转到一个显示 log 的页面，快捷方便
-	
+
 4. 显示当前账号的 user id 及其他信息
 
 	我们需要经常查当前账号信息
-	
+
 5. 跳转到指定页面
 
 	正在开发某个页面，需要依赖工程里的东西，所以在工程里开发，但是还没有开发完，由于入口深，每次改了一些东西重新跑工程还得点几下，麻烦。修改 app 首页的某个按钮点击事件，直接点击进入也不合适，影响正式代码，而且容易忘记改回来。
-	
+
 6. 其他一些杂七杂八的...
 
 ### 不想每次都输入账号密码
@@ -65,7 +65,7 @@ keywords: iOS, ZYSuspensionView
 
 SuspensionView 就是单纯一个悬浮球，可以单独集成。
 
-### TestManager 
+### TestManager
 
 TestManager 是一个单例，将你预先写好的代码块保存好，然后通过点击悬浮列表的某个 cell 执行相应代码块。
 
@@ -91,7 +91,7 @@ NSArray *baseArray = @[
                            }
                            },
                        ];
-    
+
 [ZYTestManager setupPermanentTestItemArray:baseArray];
 ```
 
@@ -125,7 +125,7 @@ LoginManager 顾名思义，就是拿来做自动登录的，同样，点击 log
 * 帮你存储账号密码
 * 列表展示你预先设置或者登录过的账号，并通过你的点击回调给你
 
-自动登录的代码是不可能帮你做好的，因为每个工程里的与登录对于的代码完全不同，不可能通用，所以，咱只能做到这一步了，哈哈哈。不过这里还是给你提供了一个获取当前控制器的方法，可以直接使用 
+自动登录的代码是不可能帮你做好的，因为每个工程里的与登录对于的代码完全不同，不可能通用，所以，咱只能做到这一步了，哈哈哈。不过这里还是给你提供了一个获取当前控制器的方法，可以直接使用
 
 ```
 UIViewController *currentVC = [ZYLoginManager currentViewControllerWithWindow:nil];
@@ -170,5 +170,5 @@ UIViewController *currentVC = [ZYLoginManager currentViewControllerWithWindow:ni
 
 基本就这么多吧，如果你觉得有用的话，请不要吝啬你的 star🌹 哦！
 
-> * 本文永久更新链接：<https://ripperhe.com/2017/03/10/suspension-view>
-> * 作者：[ripperhe](https://github.com/ripperhe)
+> * 本文作者：[Ripper](https://github.com/ripperhe)
+> * 永久链接：<https://ripperhe.com/2017/03/10/suspension-view>

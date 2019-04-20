@@ -31,9 +31,9 @@ keywords: iOS, fastlane, CocoaPods
 > 6. [通过 pod trunk push 推送 spec 文件](#a6)
 
 ### <span id="a1">安装 CocoaPods</span>
-	
+
 网上有很多教程，这里不再赘述。需要注意的是，`RubyGems` 的 [淘宝镜像](https://ruby.taobao.org/) 已经不再维护，已迁移至 [Ruby China](https://gems.ruby-china.org/)，安装 CocoaPods 前记得替换 `gem sources`。
-	
+
 ### <span id="a2">注册 CocoaPods 账号</span>
 
 首先需要注册一个 CocoaPods 账号，用于发布 pod 仓库。
@@ -130,8 +130,8 @@ $ git push
 
 ```bash
 $ git push origin master
-$ git tag '0.1.0' 
-$ git push --tags 
+$ git tag '0.1.0'
+$ git push --tags
 ```
 
 ### <span id="a5">验证 spec 文件</span>
@@ -212,7 +212,7 @@ $ pod setup
 
 整体流程如下：
 
-> 1. [安装 CocoaPods](#b1) 
+> 1. [安装 CocoaPods](#b1)
 > 2. [创建远程私有 spec 仓库](#b2)
 > 3. [克隆远程私有 spec 仓库到本地](#b3)
 > 4. [创建 spec 文件](#b4)
@@ -370,9 +370,9 @@ lane :release_pod do |options|
   target_project = options[:project]
   target_version = options[:version]
   spec_path = "#{target_project}.podspec"
-  
+
   # git pull
-  git_pull 
+  git_pull
   # 确认是 master 分支
   ensure_git_branch
   # 修改 spec 为即将发布的版本
@@ -665,5 +665,5 @@ $ tree pod-template
 * [https://guides.cocoapods.org/](https://guides.cocoapods.org/)
 * [https://www.zybuluo.com/pockry/note/524101](https://www.zybuluo.com/pockry/note/524101)
 
-> * 本文永久更新链接：<https://ripperhe.com/2017/03/30/fastlane-pod>
-> * 作者：[ripperhe](https://github.com/ripperhe)
+> * 本文作者：[Ripper](https://github.com/ripperhe)
+> * 永久链接：<https://ripperhe.com/2017/03/30/fastlane-pod>

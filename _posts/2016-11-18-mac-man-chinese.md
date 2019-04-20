@@ -148,5 +148,5 @@ $ open -a atom ~/.zshrc
 
 然后，打完收工。
 
-> * 本文永久更新链接：<https://ripperhe.com/2016/11/18/mac-man-chinese>
-> * 作者：[ripperhe](https://github.com/ripperhe)
+> * 本文作者：[Ripper](https://github.com/ripperhe)
+> * 永久链接：<https://ripperhe.com/2016/11/18/mac-man-chinese>

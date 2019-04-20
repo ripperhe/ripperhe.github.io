@@ -53,19 +53,19 @@ UIWindow继承自UIView，我们一般不会直接去设置其UI展现，但它�
 新建一个iOS工程,在没有触发键盘时，在控制台打印`winodws`如下：
 
 ```objc
-(lldb) po [[UIApplication sharedApplication] windows]    
-<__NSArrayM 0x61800024d7d0>(    
-<**UIWindow**: 0x7fd8e1a06370; frame = (0 0; 414 736); autoresize = W+H; gestureRecognizers = <NSArray: 0x61800024d170>; layer = <UIWindowLayer: 0x61000003e7c0>>    
+(lldb) po [[UIApplication sharedApplication] windows]
+<__NSArrayM 0x61800024d7d0>(
+<**UIWindow**: 0x7fd8e1a06370; frame = (0 0; 414 736); autoresize = W+H; gestureRecognizers = <NSArray: 0x61800024d170>; layer = <UIWindowLayer: 0x61000003e7c0>>
 )
 ```
 该window就是 app delegate 的window，即系统自动生成的那个window。当文本编辑，触发键盘之后，打印`windows`如下：
 
 ```objc
-(lldb) po [[UIApplication sharedApplication] windows]    
-<__NSArrayM 0x61000005d1f0>(   
-<**UIWindow**: 0x7fd8e1a06370; frame = (0 0; 414 736); autoresize = W+H; gestureRecognizers = <NSArray: 0x61800024d170>; layer = <UIWindowLayer: 0x61000003e7c0>>,     
-<**UITextEffectsWindow**: 0x7fd8dfc1cde0; frame = (0 0; 414 736); opaque = NO; autoresize = W+H; layer = <UIWindowLayer: 0x60800022dd60>>,        
-<**UIRemoteKeyboardWindow**: 0x7fd8dfc27e40; frame = (0 0; 414 736); opaque = NO; autoresize = W+H; layer = <UIWindowLayer: 0x608000231300>>   
+(lldb) po [[UIApplication sharedApplication] windows]
+<__NSArrayM 0x61000005d1f0>(
+<**UIWindow**: 0x7fd8e1a06370; frame = (0 0; 414 736); autoresize = W+H; gestureRecognizers = <NSArray: 0x61800024d170>; layer = <UIWindowLayer: 0x61000003e7c0>>,
+<**UITextEffectsWindow**: 0x7fd8dfc1cde0; frame = (0 0; 414 736); opaque = NO; autoresize = W+H; layer = <UIWindowLayer: 0x60800022dd60>>,
+<**UIRemoteKeyboardWindow**: 0x7fd8dfc27e40; frame = (0 0; 414 736); opaque = NO; autoresize = W+H; layer = <UIWindowLayer: 0x608000231300>>
 )
 ```
 
@@ -84,24 +84,24 @@ UIWindow继承自UIView，我们一般不会直接去设置其UI展现，但它�
 - (void)handleScreenConnectNotification:(NSNotification*)aNotification {
     UIScreen*    newScreen = [aNotification object];
     CGRect        screenBounds = newScreen.bounds;
- 
+
     if (!_secondWindow) {
         _secondWindow = [[UIWindow alloc] initWithFrame:screenBounds];
         _secondWindow.screen = newScreen;
- 
+
         // Set the initial UI for the window and show it.
         [self.viewController displaySelectionInSecondaryWindow:_secondWindow];
         [_secondWindow makeKeyAndVisible];
     }
 }
- 
+
 - (void)handleScreenDisconnectNotification:(NSNotification*)aNotification {
     if (_secondWindow) {
         // Hide and then delete the window.
         _secondWindow.hidden = YES;
         [_secondWindow release];
         _secondWindow = nil;
- 
+
         // Update the main screen based on what is showing here.
         [self.viewController displaySelectionOnMainScreen];
     }
@@ -140,7 +140,7 @@ UIKIT_EXTERN const UIWindowLevel UIWindowLevelStatusBar;   4000
 ```
 一个window的hideen属性默认是YES的，`makeKeyWindow`是将一个window设置为keyWindow，但是`makeKeyAndVisible`会将一个window设置为keyWindow并将其显示。如何没有变成keyWindow,则其内部的文本框没法输入文字。
 
-> UIWindow: 0x12dd3ef20; frame = (0 200; 200 200); hidden = YES; gestureRecognizers = \<NSArray: 0x12dd40530>; layer = \<UIWindowLayer: 0x12dd3f230>    
+> UIWindow: 0x12dd3ef20; frame = (0 200; 200 200); hidden = YES; gestureRecognizers = \<NSArray: 0x12dd40530>; layer = \<UIWindowLayer: 0x12dd3f230>
 > UIWindow: 0x12dd3ef20; frame = (0 200; 200 200); gestureRecognizers = \<NSArray: 0x12dd40530>; layer = \<UIWindowLayer: 0x12dd3f230>
 
 以上为将一个window调用`makeKeyAndVisible`前后对比，可以发现，其hidden从YES变为NO。所以某个window调用`makeKeyAndVisible`之后，系统对该window至少做了以下事情：
@@ -242,5 +242,5 @@ self.testWindow = nil;
 
 ✨如果有用，还望朋友能给个star，谢谢。
 
-> * 本文永久更新链接：<https://ripperhe.com/2016/10/17/ios-uiwindow>
-> * 作者：[ripperhe](https://github.com/ripperhe)
+> * 本文作者：[Ripper](https://github.com/ripperhe)
+> * 永久链接：<https://ripperhe.com/2016/10/17/ios-uiwindow>

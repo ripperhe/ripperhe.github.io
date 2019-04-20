@@ -6,8 +6,8 @@ description: 《经济为什么会崩溃》读书笔记
 keywords: 经济
 ---
 
-> 这是一篇读书笔记，文章名即书名。    
-> 作者：彼得·D·希夫 安德鲁·J·希夫    
+> 这是一篇读书笔记，文章名即书名。
+> 作者：彼得·D·希夫 安德鲁·J·希夫
 > 阅读时间：10/14—10/27
 
 ![how an economy grows and why it crashes](http://upload-images.jianshu.io/upload_images/939125-7b729ce390312afa.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -29,7 +29,7 @@ keywords: 经济
 4.这本书和我有什么关系？
 
 > 至少让我对经济学有了一个初步的认识，虽然故事简单，但是对原理的剖析却很深刻，是一本值得一读的书籍。本书让我对为什么美元贬值，为什么房价飙升，为什么会造成08年经济危机，以及中国又为什么在这次全球性的经济危机中逃脱这些问题有了一定的了解。
-> 
+>
 > 同时，更加巩固了储蓄在我心目中的重要性。对个人而言，我认为生活就应该量入为出。
 
 
@@ -56,5 +56,5 @@ keywords: 经济
 * 一国的经济不会因为人们的消费而增长，而是经济增长带动人们的消费。
 * 通货膨胀不过是把财富从以某种货币储蓄的人手中转移到以同种货币负债的人那里。
 
-> * 本文永久更新链接：<https://ripperhe.com/2016/10/30/how-an-economy-grows-and-why-it-crashes>
-> * 作者：[ripperhe](https://github.com/ripperhe)
+> * 本文作者：[Ripper](https://github.com/ripperhe)
+> * 永久链接：<https://ripperhe.com/2016/10/30/how-an-economy-grows-and-why-it-crashes>

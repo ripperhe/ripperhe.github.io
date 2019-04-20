@@ -13,7 +13,7 @@ keywords: iOS, UIWindow
 ##  UIApplication ★ keyWindow
 
 > The app's key window.
-> 
+>
 > This property holds the UIWindow object in the windows array that is most recently sent the makeKeyAndVisible message.
 
 ### keyWindow 的作用？
@@ -46,7 +46,7 @@ self.window = nil;
 * 一定是 windows 数组中，用户创建的 level 最大的，但是 level 最大的可能有几个，因为 level 可以相同
 * level 相同的时候，一定是实际显示在最上面的那个
 
-总结一下就是，如果当前的 keyWindow  设置 `hidden = YES`，系统会去找 windows 数组中 **实际显示在最上层的那个 window** 
+总结一下就是，如果当前的 keyWindow  设置 `hidden = YES`，系统会去找 windows 数组中 **实际显示在最上层的那个 window**
 （当前的 keyWindow 可能就是实际显示在最上层的那个，系统会将其跳过）
 
 需要注意的是，实际显示在最上面的不一定是 windows 最后一个元素，后面会讲~
@@ -159,7 +159,7 @@ self.window.hidden = NO;
 
 makeKeyWindow 方法的作用就是将一个 window 设置为 keyWindow
 
-1. 调用 `makeKeyAndVisible` 方法内部会调用 `makeKeyWindow` 方法 
+1. 调用 `makeKeyAndVisible` 方法内部会调用 `makeKeyWindow` 方法
 2. 设置 keyWindow 的 `hidden = YES` 的时候，系统会找一个 window，设置为 keyWindow，所以也会调用 `makeKeyWindow`
 
 ### window 的 setHidden: 方法
@@ -180,7 +180,7 @@ makeKeyWindow 方法的作用就是将一个 window 设置为 keyWindow
 
 ### 添加一个视图到最上层的 window
 
-不要使用 
+不要使用
 
 * `[[UIApplication sharedApplication] keyWindow]`
 * `[[[UIApplication sharedApplication] windows] lastObject]`
@@ -193,7 +193,7 @@ makeKeyWindow 方法的作用就是将一个 window 设置为 keyWindow
 
 ### 如果你只是想显示一个 window，不想它变成 keyWindow
 
-不要使用 
+不要使用
 
 ```objc
 [self.window makeKeyAndVisible];
@@ -222,5 +222,5 @@ self.window.hidden = NO;
 * <https://bugtags.kf5.com/hc/kb/article/77692/>
 * <https://jkyin.me/uiwindow/>
 
-> * 本文永久更新链接：<https://ripperhe.com/2018/09/03/ios-uiwindow-second>
-> * 作者：[ripperhe](https://github.com/ripperhe)
+> * 本文作者：[Ripper](https://github.com/ripperhe)
+> * 永久链接：<https://ripperhe.com/2018/09/03/ios-uiwindow-second>
