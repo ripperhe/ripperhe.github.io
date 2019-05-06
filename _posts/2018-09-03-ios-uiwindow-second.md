@@ -51,6 +51,22 @@ self.window = nil;
 
 需要注意的是，实际显示在最上面的不一定是 windows 最后一个元素，后面会讲~
 
+### keyWindow 可能为空吗？ `2019.05.06 更新`
+
+目前知道以下情况，keyWindow 可能为空。
+
+在使用 `Main.storyboard` 自动初始化根控制器，不手动去调用 AppDelegate 的 window 的 `makeKeyAndVisible` 或者 `makeKeyWindow` 的时候，是可能为空的。
+
+```objc
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+```
+
+这个时候在上面这个方法没有走完的时候，可以打印一下，keyWindow 是为 nil 的。只有等该方法走完之后，AppDelegate 的 window 才会变成 keyWindow。
+
+需要注意的是，在 AppDelegate 的 window 还没变成 keyWindow 之前，初始化其他 window，可能会造成 AppDelegate 的 window 显示不正常。
+
+所以尽量不在 `didFinishLaunchingWithOptions` 方法中初始化其他 window，实在需要的话，可以在初始化其他 window 之前，先调用 AppDelegate 的 window 的 `makeKeyAndVisible` 方法。
+
 ## UIApplication ★ windows
 
 > The app's visible and hidden windows.
@@ -64,6 +80,18 @@ self.window = nil;
 系统创建创建的 window（例如 status bar 的 window）不会被加到该数组
 
 其他情况下，只要一个 window 被初始化了，就会自动加到 windows 数组
+
+`2019.05.06 更新` 
+
+其实用**加入**这个词语不太准确，经过后期的一些了解，这个 windows 数组应该是一个计算属性，也就是说，在调用到该方法的时候，才去判断哪些 window 应该放到数组，返回回来。
+
+如果实在不想自己的 window 加入到这个数组，可以继承自 UIWindow，然后重写下面这个私有方法（风险未知）
+
+```objc
+- (bool)isInternalWindow {
+    return YES;
+}
+```
 
 ### windows 数组元素顺序？
 
@@ -207,11 +235,31 @@ self.window.hidden = NO;
 
 这样可以将它显示出来，并且不会设置为 keyWindow。如果没显示正常，检查一下 window level 是否正确。
 
-### 如果想让一个 winow 永远不要变成 keyWindow
+### 如果想让一个 window 永远不要变成 keyWindow
 
 最好是重写 becomeKeyWindow 方法，调用 `[super becomeKeyWindow]` 之后，找到实际显示在最上层的全屏 window，将其设置为 keyWindow
 
 之前已经说过，找实际显示在最上层的 window 其实是有一定问题的（level 相同的情况），将就用吧 😂 ，实在没找到更好的方法，如果你有有更好的办法的话，请告诉我~
+
+`2019.05.06 更新`
+
+经常一番研究，总算找到了让一个 window 不变成 keyWindow 的方法，可以继承 UIWindow，然后重写以下私有方法（风险未知）
+
+```objc
+- (bool)_canBecomeKeyWindow {
+    return NO;
+}
+```
+
+### 如何让 window 不影响状态栏 `2019.05.06 更新`
+
+经测试，显示新的 window 有时候会影响到状态栏的展示，为了彻底避免影响到状态栏，可以继承 UIWindow，然后重写以下私有方法（风险未知）
+
+```objc
+- (bool)_canAffectStatusBarAppearance {
+    return NO;
+}
+```
 
 ## 参考
 
