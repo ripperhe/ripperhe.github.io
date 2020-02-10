@@ -10,7 +10,7 @@ keywords: 阅读, 书
 > 作者：莫提默·J.艾德勒 查尔斯·范多伦
 > 阅读时间：10/4-10/12
 
-![how to read a book](http://upload-images.jianshu.io/upload_images/939125-92f0cab43cadf10b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![how to read a book](https://raw.githubusercontent.com/ripperhe/oss/master/2016/1013/howtoreadabook.jpg)
 
 自我感觉读书效率不够高，一直想要如何更有效率地读书，我很庆幸自己读了这本书，让我对**阅读**这件事有了更多的了解。对于此次阅读，按说中所说的规则来评判的话，既不是**检视阅读**，也不是**分析阅读**。不过，对于这本书，我一定会再细细的品读，并持续的去理解和实践本书中所说到的阅读技巧和规则。读书确实非常重要，尤其是在阅读完一本书之后，将其转化为自身的能力。此书的目的则在于提高读者的阅读能力。
 

@@ -10,7 +10,7 @@ keywords: 经济
 > 作者：彼得·D·希夫 安德鲁·J·希夫
 > 阅读时间：10/14—10/27
 
-![how an economy grows and why it crashes](http://upload-images.jianshu.io/upload_images/939125-7b729ce390312afa.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![how an economy grows and why it crashes](https://raw.githubusercontent.com/ripperhe/oss/master/2016/1030/economy-crash.jpg)
 
 ## 读书四问
 
