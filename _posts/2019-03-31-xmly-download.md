@@ -34,7 +34,7 @@ OK，现在文件下载好了，打开 Chrome 浏览器，进入 <https://www.xi
 
 紧接着点击浏览器右边竖着的**三个点**，选中**更多工具**，再选中**开发者工具**，将其打开
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20190331/Jietu20190331-124640.png)
+![](https://raw.githubusercontent.com/ripperhe/oss/master/2019/0331/Jietu20190331-124640.png)
 
 打开之后
 
@@ -45,17 +45,17 @@ OK，现在文件下载好了，打开 Chrome 浏览器，进入 <https://www.xi
 
 如下图所示
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20190331/Jietu20190331-125709.png)
+![](https://raw.githubusercontent.com/ripperhe/oss/master/2019/0331/Jietu20190331-125709.png)
 
 重新进入网站之后，应该会获取到一个网络请求。如下所示
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20190331/Jietu20190331-125823.png)
+![](https://raw.githubusercontent.com/ripperhe/oss/master/2019/0331/Jietu20190331-125823.png)
 
 **如果没有看到任何一个请求，就随便选一个专辑，点进去，然后播放任意一个音频，应该就会有请求出现在列表中了。**
 
 选中一个请求之后，查看该请求的详细信息，选中 `Headers` - `Request Headers` - `Cookie`，这个 Cookie 里面的内容就是我们需要的东西
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20190331/Jietu20190331-130042.png)
+![](https://raw.githubusercontent.com/ripperhe/oss/master/2019/0331/Jietu20190331-130042.png)
 
 将 Cookie 中 `1&_token=` 开始的这部分拷贝出来，到最近的一个分号 `;` 为止，这就是我们要的 token 了。**注意，从 `1` 开始复制，到 `;` 结束，不需要最后这个分号。**形如这样:
 
@@ -93,17 +93,17 @@ cookies=1&_token=24789987&IJFD87WY757C4NdV9FB4226EJD343EBE3A8D9B21B8ECA1908EF06F
 history=https://www.ximalaya.com/renwen/15801963/
 ```
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20190331/Jietu20190331-130334.png)
+![](https://raw.githubusercontent.com/ripperhe/oss/master/2019/0331/Jietu20190331-130334.png)
 
 `history` 后面对应的就是打开软件默认填写的专辑 URL 地址，可以不用管。现在将文件保存好，然后打开喜马拉雅 FM 下载工具 `喜马拉雅FM下载工具.exe`
 
 将专辑 URL 填写到顶部的输入框，然后点击 Info 按钮解析，直接显示 + 号就证明可以下载了，然后选中所有，点击 Download 按钮开始下载
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20190331/Jietu20190331-130620.png)
+![](https://raw.githubusercontent.com/ripperhe/oss/master/2019/0331/Jietu20190331-130620.png)
 
 下载完成之后，文件会放到和自动下载器的同一文件夹，如同所示
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20190331/Jietu20190331-130718.png)
+![](https://raw.githubusercontent.com/ripperhe/oss/master/2019/0331/Jietu20190331-130718.png)
 
 祝贺，现在已经下载成功了~ 🎉
 
@@ -117,7 +117,7 @@ history=https://www.ximalaya.com/renwen/15801963/
 
 如有任何问题，可以进 QQ 群讨论，群号：**871061387**。
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20190331/IMG_0524.JPG)
+![](https://raw.githubusercontent.com/ripperhe/oss/master/2019/0331/IMG_0524.JPG)
 
 > * 本文作者：[Ripper](https://github.com/ripperhe)
 > * 永久链接：<https://ripperhe.com/2019/03/31/xmly-download>

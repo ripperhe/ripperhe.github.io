@@ -21,9 +21,9 @@ keywords: Windows, Aria2, BaiduExporter
 ### 下载安装
 
 1. 进入网址下载 [https://github.com/acgotaku/BaiduExporter](https://github.com/acgotaku/BaiduExporter)
-	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/snip_20180701212558.png)
+	![](https://raw.githubusercontent.com/ripperhe/oss/master/2018/0702/snip_20180701212558.png)
 2. 解压文件夹，在浏览器输入 `chrome://extensions` 进入扩展程序页面，选中页面右上角的 `开发者模式`，然后将`BaiduExporter.crx` 文件拖入 Chrome 扩展程序页面，进行安装
-	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/snip_20180701100117.png)
+	![](https://raw.githubusercontent.com/ripperhe/oss/master/2018/0702/snip_20180701100117.png)
 
 ### 加入白名单
 
@@ -31,37 +31,37 @@ keywords: Windows, Aria2, BaiduExporter
 
 1. 下载 [chrome.adm](https://pan.baidu.com/s/17Dme1SMNYJ3HQfftghO_bg)
 2. Win+R 调起 `运行` 程序，输入 `gpedit.msc`，进入 `本地组策略编辑器`sdf
-	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/snip_20180702133428.png)
+	![](https://raw.githubusercontent.com/ripperhe/oss/master/2018/0702/snip_20180702133428.png)
 3. 选中 `计算器配置`——`管理模板`，右键调出菜单，点击 `添加/删除模板`
-	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/Jietu20180702-102755.png)
+	![](https://raw.githubusercontent.com/ripperhe/oss/master/2018/0702/Jietu20180702-102755.png)
 4. 在 `添加/删除模板` 页面，点击 `添加`，找到之前下载的 `chrome.adm`，选中打开，点击关闭
-	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/Jietu20180702-102918@2x.png)
+	![](https://raw.githubusercontent.com/ripperhe/oss/master/2018/0702/Jietu20180702-102918@2x.png)
 5. 选中 `计算器配置`——`管理模板`——`经典管理模板(ADM)`——`Google`——`Google Chrome`——`扩展程序`——`配置扩展程序安装白名单`，打开
-	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/snip_20180702140402.png)
+	![](https://raw.githubusercontent.com/ripperhe/oss/master/2018/0702/snip_20180702140402.png)
 6. 在 `配置扩展程序安装白名单` 页面，点击 `已启用`，点击 `显示`
-	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/Jietu20180702-103532.png)
+	![](https://raw.githubusercontent.com/ripperhe/oss/master/2018/0702/Jietu20180702-103532.png)
 7. 在 `显示内容` 页面，输入在 Chrome 浏览器扩展程序页面拷贝的 `BaiduExporter` 插件的 ID，点击 `确定`
-	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/snip_20180702100117.png)
-	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/Jietu20180702-103732.png)
+	![](https://raw.githubusercontent.com/ripperhe/oss/master/2018/0702/snip_20180702100117.png)
+	![](https://raw.githubusercontent.com/ripperhe/oss/master/2018/0702/Jietu20180702-103732.png)
 
 > 一般情况下，到这儿就 OK 了，不过我遇到一次这样也没法解决，不过通过添加到 `配置强制安装的扩展程序的列表` 解决了，接着上面继续操作
 
 1. 选中 `计算器配置`——`管理模板`——`经典管理模板(ADM)`——`Google`——`Google Chrome`——`扩展程序`——`配置强制安装的扩展程序的列表`，打开
-	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/Jietu20180702-104124.png)
+	![](https://raw.githubusercontent.com/ripperhe/oss/master/2018/0702/Jietu20180702-104124.png)
 2. 在 `配置强制安装的扩展程序的列表` 页面，点击 `已启用`，点击 `显示`
-	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/Jietu20180702-104218.png)
+	![](https://raw.githubusercontent.com/ripperhe/oss/master/2018/0702/Jietu20180702-104218.png)
 3. 在 `显示内容` 页面，输入在 Chrome 浏览器扩展程序页面拷贝的 `BaiduExporter` 插件的 ID，点击 `确定`
-	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/snip_20180702100117.png)
-	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/Jietu20180702-104353.png)
+	![](https://raw.githubusercontent.com/ripperhe/oss/master/2018/0702/snip_20180702100117.png)
+	![](https://raw.githubusercontent.com/ripperhe/oss/master/2018/0702/Jietu20180702-104353.png)
 
 ## 安装 Aria2
 
 ### 下载安装
 
 1. 进入网址下载 [https://github.com/aria2/aria2/releases/tag/release-1.34.0](https://github.com/aria2/aria2/releases/tag/release-1.34.0)
-	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/snip_20180702105317.png)
+	![](https://raw.githubusercontent.com/ripperhe/oss/master/2018/0702/snip_20180702105317.png)
 2. 将压缩包解压，将解压出来的文件放到 `C:\Program Files\aria2` 文件夹下面
-	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/snip_20180702142705.png)
+	![](https://raw.githubusercontent.com/ripperhe/oss/master/2018/0702/snip_20180702142705.png)
 
 ### 配置
 
@@ -84,7 +84,7 @@ C:\PROGRA~1\aria2\aria2c --conf-path=C:\PROGRA~1\aria2\aria2.conf
 
 其中 `PROGRA~1` 代表的是 `Program Files` 文件夹，终端里面不方便使用空格，所以用此代替。如果你不是按照我的目录存放的文件，那么将 `C:\PROGRA~1\aria2` 替换成你自己的文件夹路径
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/snip_20180702112631.png)
+![](https://raw.githubusercontent.com/ripperhe/oss/master/2018/0702/snip_20180702112631.png)
 
 #### 2. 制作一个 `.vbs` 快捷启动
 
@@ -101,7 +101,7 @@ CreateObject("WScript.Shell").Run "C:\PROGRA~1\aria2\aria2c --conf-path=C:\PROGR
 
 进入网址 [Aria2 Web Frontend](http://binux.github.io/yaaw/demo/#)，需要将 `JSON-RPC Path` 修改为 `http://localhost:6800/jsonrpc` 即可显示，将 `Auto Refresh` 修改为 `1s` 看起来更方便一些
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/snip_20180702141826.png)
+![](https://raw.githubusercontent.com/ripperhe/oss/master/2018/0702/snip_20180702141826.png)
 
 ## 使用方法
 
@@ -111,9 +111,9 @@ CreateObject("WScript.Shell").Run "C:\PROGRA~1\aria2\aria2c --conf-path=C:\PROGR
 2. 将百度网盘需要下载的文件创建分享链接
 3. 用 `Chrome` 浏览器打开分享链接（此时最好**退出网页中百度云盘账号登陆状态**，以免查封）
 4. 点击页面的 `导出下载` 按钮，选中 `ARIA2 RPC`
-	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/snip_20180702113955.png)
+	![](https://raw.githubusercontent.com/ripperhe/oss/master/2018/0702/snip_20180702113955.png)
 5. 打开 [Aria2 Web Frontend](http://binux.github.io/yaaw/demo/#) 网页查看下载进度
-	![](https://raw.githubusercontent.com/ripperhe/Resource/master/20180702/snip_20180702114030.png)
+	![](https://raw.githubusercontent.com/ripperhe/oss/master/2018/0702/snip_20180702114030.png)
 
 ## 参考
 

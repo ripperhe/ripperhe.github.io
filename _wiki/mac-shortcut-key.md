@@ -35,9 +35,9 @@ keywords: Mac, shortcut, key
 
 ## 键盘图
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20170311/mac_keyboard.png)
+![](https://raw.githubusercontent.com/ripperhe/oss/master/2017/0311/mac_keyboard.png)
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20170311/mac_keyboard_fn.png)
+![](https://raw.githubusercontent.com/ripperhe/oss/master/2017/0311/mac_keyboard_fn.png)
 
 ## 官方文档
 

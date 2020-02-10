@@ -12,11 +12,11 @@ keywords: iOS, 源码, CYLTabBarController
 
 CYLTabBarController 是一个自定义的 TabBarController 框架，支持高度自定义，功能强大，使用起来非常方便。
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20170116/1.png)
+![](https://raw.githubusercontent.com/ripperhe/oss/master/2017/0116/1.png)
 
 ## 类结构
 
-![](https://raw.githubusercontent.com/ripperhe/Resource/master/20170116/2.png)
+![](https://raw.githubusercontent.com/ripperhe/oss/master/2017/0116/2.png)
 
 1. **CYLTabBarController**
 
