@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Wiki
-description: 人越学越觉得自己无知
+description: 记不住就放这里
 keywords: 维基, Wiki
 comments: false
 menu: 维基
 permalink: /wiki/
 ---
 
-> 🤓 常用的东西是不是要放在这里？
+> 🤓 好记性不如烂笔头
 
 <ul class="listing">
 {% for wiki in site.wiki %}
