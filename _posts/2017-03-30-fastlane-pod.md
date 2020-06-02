@@ -664,6 +664,3 @@ $ tree pod-template
 * [https://docs.fastlane.tools/](https://docs.fastlane.tools/)
 * [https://guides.cocoapods.org/](https://guides.cocoapods.org/)
 * [https://www.zybuluo.com/pockry/note/524101](https://www.zybuluo.com/pockry/note/524101)
-
-> * 本文作者：[Ripper](https://github.com/ripperhe)
-> * 永久链接：<https://ripperhe.com/2017/03/30/fastlane-pod>

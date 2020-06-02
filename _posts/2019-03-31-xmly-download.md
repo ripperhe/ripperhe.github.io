@@ -118,6 +118,3 @@ history=https://www.ximalaya.com/renwen/15801963/
 如有任何问题，可以进 QQ 群讨论，群号：**763915098**。
 
 <img src="https://gitee.com/ripperhe/oss/raw/master/2020/0602/fm2_qq_group.JPG" alt="QQ群二维码" width=400 />
-
-> * 本文作者：[Ripper](https://github.com/ripperhe)
-> * 永久链接：<https://ripperhe.com/2019/03/31/xmly-download>

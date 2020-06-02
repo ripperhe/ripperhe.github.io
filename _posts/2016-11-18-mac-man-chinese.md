@@ -147,6 +147,3 @@ $ open -a atom ~/.zshrc
 > source ~/.bash_profile
 
 然后，打完收工。
-
-> * 本文作者：[Ripper](https://github.com/ripperhe)
-> * 永久链接：<https://ripperhe.com/2016/11/18/mac-man-chinese>

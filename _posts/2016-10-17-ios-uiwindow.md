@@ -241,6 +241,3 @@ self.testWindow = nil;
 ✨具体细节可到GitHub下载demo查看。[GitHub地址 😁](https://github.com/ripperhe/ZYSuspensionView)
 
 ✨如果有用，还望朋友能给个star，谢谢。
-
-> * 本文作者：[Ripper](https://github.com/ripperhe)
-> * 永久链接：<https://ripperhe.com/2016/10/17/ios-uiwindow>

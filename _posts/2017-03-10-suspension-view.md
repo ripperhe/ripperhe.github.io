@@ -169,6 +169,3 @@ UIViewController *currentVC = [ZYLoginManager currentViewControllerWithWindow:ni
 我的建议是像我 demo 里面那样，写一个 `config` 类，将上面所有常用的测试代码和测试账号都写在这里类里面，放在一起，将污染做到最小。如果你这样做了，在这里 `config` 类的 `setup` 方法再加上一个 `#if DEBUG`，你会发现 `TestManager` 和 `LoginManager` 这两个单例对象根本就不会初始化，还有什么可担心的。
 
 基本就这么多吧，如果你觉得有用的话，请不要吝啬你的 star🌹 哦！
-
-> * 本文作者：[Ripper](https://github.com/ripperhe)
-> * 永久链接：<https://ripperhe.com/2017/03/10/suspension-view>
