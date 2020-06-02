@@ -1,18 +1,6 @@
-- sitename: 博客
-  name: 何乐而不为
-  url: http://ripperhe.com
-
 - sitename: GitHub
   name: ripperhe
   url: https://github.com/ripperhe
-
-- sitename: 简书
-  name: ripperhe
-  url: http://www.jianshu.com/users/b9249fb85d5d/latest_articles
-
-- sitename: 掘金
-  name: ripperhe
-  url: http://gold.xitu.io/user/5815dfbdbf22ec006892f92f
 
 - sitename: 微博
   name: ripperhe

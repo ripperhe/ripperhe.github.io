@@ -1,10 +1,11 @@
-- name: Software Engineer Keywords
+- name: 语言
   keywords:
       - Objective-C
       - Swift
-      - Ruby-菜鸟
+      - Ruby菜鸟
+      - JavaScript菜鸟
 
-- name: Client Developer Keywords
+- name: 平台
   keywords:
       - iOS
       - macOS

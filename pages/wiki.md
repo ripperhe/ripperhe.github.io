@@ -8,7 +8,7 @@ menu: 维基
 permalink: /wiki/
 ---
 
-> 🤓 好记性不如烂笔头
+> 好记性不如烂笔头
 
 <ul class="listing">
 {% for wiki in site.wiki %}

@@ -11,7 +11,7 @@
     };
     var disqus_loaded = false;
     $(function() {
-        $('.show_disqus_comment').on('click', function() { // DON'T EDIT BELOW THIS LINE
+        $('.show_disqus_comment').on('click', function() { /* DON'T EDIT BELOW THIS LINE */
             $(this).html('加载中...');
             var that = this;
             if (!disqus_loaded) {
@@ -54,7 +54,7 @@
               this.page.identifier = '{{ page.url }}';
               this.page.title = '{{ page.title }}';
             };
-            (function() { // DON'T EDIT BELOW THIS LINE
+            (function() { /* DON'T EDIT BELOW THIS LINE */
               var d = document, s = d.createElement('script');
 
               s.type = 'text/javascript';
@@ -72,8 +72,8 @@
       {% endif %}
     {% when 'gitment' %}
         <div id="container"></div>
-        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-        <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/imsun.github.io/gitment/style/default.css">
+        <script src="https://cdn.jsdelivr.net/gh/imsun.github.io/gitment/dist/gitment.browser.js"></script>
         <script>
         var gitment = new Gitment({
             id: '{{ page.url | truncate: 50, '' }}',
@@ -83,13 +83,13 @@
                 client_id: '{{ site.gitment.oauth.client_id }}',
                 client_secret: '{{ site.gitment.oauth.client_secret }}',
             },
-        })
-        gitment.render('container')
+        });
+        gitment.render('container');
         </script>
     {% when 'gitalk' %}
         <div id="gitalk-container"></div>
-        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+        <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
         <script>
         var gitalk = new Gitalk({
             id: '{{ page.url | truncate: 50, '' }}',
@@ -98,10 +98,10 @@
             repo: '{{ site.gitalk.repo }}',
             owner: '{{ site.gitalk.owner }}',
             admin: ['{{ site.gitalk.owner }}'],
-            // labels: ['gitment'],
+            labels: ['gitment'],
             perPage: 50,
-        })
-        gitalk.render('gitalk-container')
+        });
+        gitalk.render('gitalk-container');
         </script>
   {% endcase %}
 {% endif %}

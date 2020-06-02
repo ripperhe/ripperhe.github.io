@@ -11,13 +11,34 @@ keywords: 何乐而不为, 何宗苡, ripper, ripperhe
 timezone: Asia/Beijing
 encoding: "utf-8"
 side_bar_repo_limit: 4
+repository: ripperhe/ripperhe.github.io
+# 对 css 和 js 资源的 cdn 加速配置
+cdn:
+    jsdelivr:
+        enabled: true
+# 组件配置
+components:
+    # 分享
+    share:
+        enabled: false
+    # 不蒜子访问统计
+    busuanzi:
+        enabled: true
+        start_date: 2020-06-01
+# 压缩页面内容
+compress_html:
+  clippings: all
+  comments: ["<!--", "-->"]
+# 文章字数统计
+word_count:
+    enabled: true
 
 # ---------------- #
 #      Author      #
 # ---------------- #
 author: Ripper He
-organization: Picooc
-organization_url: http://www.picooc.com
+organization: 
+organization_url: 
 github_username: ripperhe
 location: Beijing, China
 email: 453942056@qq.com
@@ -37,6 +58,10 @@ navs:
 #   -
 #     href: /archives/
 #     label: 归档
+
+#   -
+#     href: /open-source/
+#     label: 开源
 
   -
     href: /wiki/
@@ -81,8 +106,6 @@ collections:
         output: true
         permalink: /wiki/:path/
 
-repository: ripperhe/ripperhe.github.io
-
 # ---------------- #
 #      Comments    #
 # ---------------- #
@@ -123,3 +146,8 @@ simple_jekyll_search:
 # ---------------- #
 google:
     analytics_id: UA-87925867-1
+    adsense:
+        footer: true
+        sidebar: true 
+        content_header: true
+        content_footer: false
