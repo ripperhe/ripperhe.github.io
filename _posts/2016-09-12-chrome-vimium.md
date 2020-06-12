@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Chrome 浏览器最牛插件之一 Vimium"
-categories: 技艺
+categories: Skill
 description: chrome 浏览器插件
 keywords: chrome, vimium
 ---

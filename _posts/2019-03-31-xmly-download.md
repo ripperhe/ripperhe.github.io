@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 喜马拉雅 FM 已购付费音频下载
-categories: 技艺
+categories: Skill
 description: 喜马拉雅 FM 音频下载
 keywords: 喜马拉雅 FM, 音频, 下载
 ---
@@ -106,6 +106,42 @@ history=https://www.ximalaya.com/renwen/15801963/
 ![](https://raw.githubusercontent.com/ripperhe/oss/master/2019/0331/Jietu20190331-130718.png)
 
 祝贺，现在已经下载成功了~ 🎉
+
+## 下载失败？`2020.06.02更新`
+
+根据群友的反应，按照以上方法大部分的电脑上是可以正常下载的，但是有少部分人仍旧下载失败，具体体现为付费专辑中仅有免费的部分显示 `+` 号，其余依旧显示 `-` 号
+
+现在说下解决方案，所有步骤跟前面一样，然后将 `config.ini` 文件的内容改为如下所示，两个需要填写 token 的地方都填上自己刚才获取的 token，**不要留空格**，**不要有任何其他多余操作**
+
+```
+[Settings]
+max_thread_num=4
+download_try_times=5
+cookies=将你获取到的1&_token的内容替换到这里
+history=https://www.ximalaya.com/renwen/15801963/
+[settings]
+max_thread_num=4
+download_try_times=5
+cookies=将你获取到的1&_token的内容替换到这里
+history=https://www.ximalaya.com/renwen/15801963/
+```
+
+形如这样
+
+```
+[Settings]
+max_thread_num=4
+download_try_times=5
+cookies=1&_token=24789987&IJFD87WY757C4NdV9FB4226EJD343EBE3A8D9B21B8ECA1908EF06FBF690BE15A02D806032C02CE58
+history=https://www.ximalaya.com/renwen/15801963/
+[settings]
+max_thread_num=4
+download_try_times=5
+cookies=1&_token=24789987&IJFD87WY757C4NdV9FB4226EJD343EBE3A8D9B21B8ECA1908EF06FBF690BE15A02D806032C02CE58
+history=https://www.ximalaya.com/renwen/15801963/
+```
+
+如果确认操作步骤和文章完全一样，没有漏掉细节，并且使用后面这个 config 文件还是无法下载，那就放弃吧，放弃吧 😂
 
 ## 最后
 
